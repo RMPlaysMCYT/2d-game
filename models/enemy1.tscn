@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bmmufoehrb7q"]
+
+[ext_resource type="Texture2D" uid="uid://koxy66i0reoq" path="res://assets/Characterss/p1_front.png" id="1_p7yhp"]
+[ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="2_qc61f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylppj"]
+size = Vector2(67, 92)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1971025890]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=953995622]
+texture = ExtResource("1_p7yhp")
+
+[node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("2_qc61f")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=98107932]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_ylppj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=692013989]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_ylppj")

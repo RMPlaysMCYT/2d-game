@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 
+var Coins_Collected: int = 0
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 # --- NEW VARIABLES ---
