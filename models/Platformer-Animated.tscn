@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://blbk3ptcfjwnk"]
+
+[ext_resource type="Texture2D" uid="uid://b27hqcue3sf5" path="res://assets/Tiles/Rock/tile_0000.png" id="1_rvwgl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvwgl"]
+size = Vector2(56, 20)
+
+[sub_resource type="Animation" id="Animation_rvwgl"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_yegr4"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 160, -0.16666667, -26.666668, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_so8en"]
+_data = {
+&"RESET": SubResource("Animation_rvwgl"),
+&"move": SubResource("Animation_yegr4")
+}
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=679187258]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1519394957]
+shape = SubResource("RectangleShape2D_rvwgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1382134322]
+texture_filter = 1
+texture = ExtResource("1_rvwgl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollisionShape2D" unique_id=1974536674]
+texture_filter = 1
+position = Vector2(18, 0)
+texture = ExtResource("1_rvwgl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CollisionShape2D" unique_id=1900432482]
+texture_filter = 1
+position = Vector2(-18, 0)
+texture = ExtResource("1_rvwgl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1546035998]
+libraries/ = SubResource("AnimationLibrary_so8en")
+autoplay = &"move"
