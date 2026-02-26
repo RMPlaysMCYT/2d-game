@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2p2ljxyrbeyr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pkblq"]
+font_size = 32
+
+[node name="Hud" type="Control" unique_id=1685125644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1951230413]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 60.0
+offset_right = 252.0
+offset_bottom = 105.0
+text = "Coin Count: 0"
+label_settings = SubResource("LabelSettings_pkblq")

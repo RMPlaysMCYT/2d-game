@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://ddv5kxhld5ixr" path="res://assets/Environment/Layer_0007_Lights.png" id="14_wj65a"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="19_dbw3f"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="20_5eoqb"]
-[ext_resource type="PackedScene" uid="uid://bmmufoehrb7q" path="res://models/enemy1.tscn" id="20_pf7t0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -7257,7 +7256,27 @@ _data = {
 &"moveY": SubResource("Animation_ec3w0")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ti2ko"]
+[sub_resource type="Animation" id="Animation_dbw3f"]
+resource_name = "zomm"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5eoqb"]
+_data = {
+&"zomm": SubResource("Animation_dbw3f")
+}
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ec3w0"]
 
 [node name="Main" type="Node2D" unique_id=199653027]
 position = Vector2(640, 360)
@@ -7334,55 +7353,56 @@ shape = SubResource("RectangleShape2D_d33jp")
 libraries/ = SubResource("AnimationLibrary_ec3w0")
 autoplay = &"moveY"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=694522500]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2100774592]
-position = Vector2(-33, 769)
-shape = SubResource("WorldBoundaryShape2D_ti2ko")
-
-[node name="Coin" parent="." unique_id=142939349 instance=ExtResource("19_dbw3f")]
-position = Vector2(282, 476)
-
-[node name="Coin2" parent="." unique_id=1063694857 instance=ExtResource("19_dbw3f")]
-position = Vector2(282, 453)
-
-[node name="Coin3" parent="." unique_id=844500025 instance=ExtResource("19_dbw3f")]
-position = Vector2(304, 476)
-
-[node name="Coin4" parent="." unique_id=1694895493 instance=ExtResource("19_dbw3f")]
-position = Vector2(304, 453)
-
-[node name="Coin5" parent="." unique_id=220988992 instance=ExtResource("19_dbw3f")]
-position = Vector2(326, 476)
-
-[node name="Coin6" parent="." unique_id=1647654537 instance=ExtResource("19_dbw3f")]
-position = Vector2(326, 453)
-
-[node name="Coin7" parent="." unique_id=1059416751 instance=ExtResource("19_dbw3f")]
-position = Vector2(348, 476)
-
-[node name="Coin8" parent="." unique_id=497951096 instance=ExtResource("19_dbw3f")]
-position = Vector2(348, 453)
-
-[node name="Coin9" parent="." unique_id=1093095536 instance=ExtResource("19_dbw3f")]
-position = Vector2(370, 476)
-
-[node name="Coin10" parent="." unique_id=1365117277 instance=ExtResource("19_dbw3f")]
-position = Vector2(370, 453)
-
-[node name="Player" parent="." unique_id=686976790 instance=ExtResource("2_186wf")]
-position = Vector2(134, 443)
+[node name="player" parent="." unique_id=686976790 instance=ExtResource("2_186wf")]
+position = Vector2(134, 448)
 script = ExtResource("3_jb1ob")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1633857640]
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1633857640]
 position = Vector2(80, -27)
-zoom = Vector2(2.72, 2.72)
+zoom = Vector2(2, 2)
 limit_bottom = 995
 
-[node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
-position = Vector2(203, 833)
-collision_mask = 1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player/Camera2D" unique_id=93400544]
+libraries/ = SubResource("AnimationLibrary_5eoqb")
 
-[node name="CharacterBody2D" parent="." unique_id=1971025890 instance=ExtResource("20_pf7t0")]
-position = Vector2(549, 489)
-scale = Vector2(0.4725414, 0.48965862)
+[node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2028354725]
+position = Vector2(218, 787)
+shape = SubResource("WorldBoundaryShape2D_ec3w0")
+
+[node name="Coins" parent="." unique_id=1558858616 instance=ExtResource("19_dbw3f")]
+position = Vector2(303, 481)
+
+[node name="Coins2" parent="." unique_id=1759644112 instance=ExtResource("19_dbw3f")]
+position = Vector2(302, 440)
+
+[node name="Coins3" parent="." unique_id=1613987735 instance=ExtResource("19_dbw3f")]
+position = Vector2(340, 439)
+
+[node name="Coins4" parent="." unique_id=2136619115 instance=ExtResource("19_dbw3f")]
+position = Vector2(341, 480)
+
+[node name="Coins5" parent="." unique_id=321948337 instance=ExtResource("19_dbw3f")]
+position = Vector2(302, 397)
+
+[node name="Coins6" parent="." unique_id=1452464729 instance=ExtResource("19_dbw3f")]
+position = Vector2(301, 356)
+
+[node name="Coins7" parent="." unique_id=880203325 instance=ExtResource("19_dbw3f")]
+position = Vector2(339, 355)
+
+[node name="Coins8" parent="." unique_id=1789047059 instance=ExtResource("19_dbw3f")]
+position = Vector2(340, 396)
+
+[node name="Coins9" parent="." unique_id=267687731 instance=ExtResource("19_dbw3f")]
+position = Vector2(301, 317)
+
+[node name="Coins10" parent="." unique_id=1634452567 instance=ExtResource("19_dbw3f")]
+position = Vector2(300, 276)
+
+[node name="Coins11" parent="." unique_id=161832915 instance=ExtResource("19_dbw3f")]
+position = Vector2(338, 275)
+
+[node name="Coins12" parent="." unique_id=809770235 instance=ExtResource("19_dbw3f")]
+position = Vector2(339, 316)

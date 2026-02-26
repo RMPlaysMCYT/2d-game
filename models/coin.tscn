@@ -3,32 +3,31 @@
 [ext_resource type="Texture2D" uid="uid://cplhgl34pp1vr" path="res://assets/Items/MonedaD.png" id="1_8wasy"]
 [ext_resource type="Script" uid="uid://cldoddhmxkgki" path="res://models/coin.gd" id="1_bg2rp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bg2rp"]
-atlas = ExtResource("1_8wasy")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_bg2rp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ci0ay"]
 atlas = ExtResource("1_8wasy")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5enir"]
 atlas = ExtResource("1_8wasy")
-region = Rect2(32, 0, 16, 16)
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rhoaw"]
 atlas = ExtResource("1_8wasy")
-region = Rect2(48, 0, 16, 16)
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_giv6y"]
 atlas = ExtResource("1_8wasy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7krf"]
+atlas = ExtResource("1_8wasy")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_k7krf"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6pru"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bg2rp")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ci0ay")
 }, {
@@ -40,28 +39,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_giv6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7krf")
 }],
 "loop": true,
 "name": &"default",
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_d6pru"]
-
-[node name="Coin" type="Node2D" unique_id=142939349]
+[node name="Coins" type="Area2D" unique_id=1558858616]
+scale = Vector2(1.5, 1.5)
+collision_mask = 2
 script = ExtResource("1_bg2rp")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=682463241]
-collision_mask = 2
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1980473908]
+shape = SubResource("CircleShape2D_bg2rp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=900662127]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328928168]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_k7krf")
+sprite_frames = SubResource("SpriteFrames_d6pru")
 autoplay = "default"
-frame_progress = 0.5444812
+frame = 3
+frame_progress = 0.09005639
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=717836586]
-shape = SubResource("CircleShape2D_d6pru")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="child_entered_tree" from="Area2D/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

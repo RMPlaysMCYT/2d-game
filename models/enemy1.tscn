@@ -6,14 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ylppj"]
 size = Vector2(67, 92)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1971025890]
+[node name="emeny1" type="CharacterBody2D" unique_id=1971025890]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=953995622]
 texture = ExtResource("1_p7yhp")
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("2_qc61f")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=98107932]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KillZone" unique_id=98107932]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_ylppj")
 
