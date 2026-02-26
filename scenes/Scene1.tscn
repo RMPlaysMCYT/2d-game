@@ -7276,6 +7276,9 @@ _data = {
 &"zomm": SubResource("Animation_dbw3f")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_pkblq"]
+font_size = 32
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ec3w0"]
 
 [node name="Main" type="Node2D" unique_id=199653027]
@@ -7365,6 +7368,15 @@ limit_bottom = 995
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player/Camera2D" unique_id=93400544]
 libraries/ = SubResource("AnimationLibrary_5eoqb")
 
+[node name="CoinLabel" type="Label" parent="player/Camera2D" unique_id=519740674]
+visible = false
+offset_left = -279.0
+offset_top = -151.0
+offset_right = -73.0
+offset_bottom = -106.0
+text = "Coin Count: 0"
+label_settings = SubResource("LabelSettings_pkblq")
+
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2028354725]
@@ -7372,37 +7384,4 @@ position = Vector2(218, 787)
 shape = SubResource("WorldBoundaryShape2D_ec3w0")
 
 [node name="Coins" parent="." unique_id=1558858616 instance=ExtResource("19_dbw3f")]
-position = Vector2(303, 481)
-
-[node name="Coins2" parent="." unique_id=1759644112 instance=ExtResource("19_dbw3f")]
-position = Vector2(302, 440)
-
-[node name="Coins3" parent="." unique_id=1613987735 instance=ExtResource("19_dbw3f")]
-position = Vector2(340, 439)
-
-[node name="Coins4" parent="." unique_id=2136619115 instance=ExtResource("19_dbw3f")]
-position = Vector2(341, 480)
-
-[node name="Coins5" parent="." unique_id=321948337 instance=ExtResource("19_dbw3f")]
-position = Vector2(302, 397)
-
-[node name="Coins6" parent="." unique_id=1452464729 instance=ExtResource("19_dbw3f")]
-position = Vector2(301, 356)
-
-[node name="Coins7" parent="." unique_id=880203325 instance=ExtResource("19_dbw3f")]
-position = Vector2(339, 355)
-
-[node name="Coins8" parent="." unique_id=1789047059 instance=ExtResource("19_dbw3f")]
-position = Vector2(340, 396)
-
-[node name="Coins9" parent="." unique_id=267687731 instance=ExtResource("19_dbw3f")]
-position = Vector2(301, 317)
-
-[node name="Coins10" parent="." unique_id=1634452567 instance=ExtResource("19_dbw3f")]
-position = Vector2(300, 276)
-
-[node name="Coins11" parent="." unique_id=161832915 instance=ExtResource("19_dbw3f")]
-position = Vector2(338, 275)
-
-[node name="Coins12" parent="." unique_id=809770235 instance=ExtResource("19_dbw3f")]
-position = Vector2(339, 316)
+position = Vector2(284, 471)
