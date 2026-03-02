@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ddv5kxhld5ixr" path="res://assets/Environment/Layer_0007_Lights.png" id="14_wj65a"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="19_dbw3f"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="20_5eoqb"]
+[ext_resource type="PackedScene" uid="uid://ch1lnhmhoyu2t" path="res://models/coin2.tscn" id="20_pf7t0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -7362,7 +7363,7 @@ script = ExtResource("3_jb1ob")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1633857640]
 position = Vector2(80, -27)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.52, 1.52)
 limit_bottom = 995
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player/Camera2D" unique_id=93400544]
@@ -7385,3 +7386,195 @@ shape = SubResource("WorldBoundaryShape2D_ec3w0")
 
 [node name="Coins" parent="." unique_id=1558858616 instance=ExtResource("19_dbw3f")]
 position = Vector2(284, 471)
+
+[node name="Coins2" parent="." unique_id=1842843679 instance=ExtResource("19_dbw3f")]
+position = Vector2(316, 471)
+
+[node name="Coins3" parent="." unique_id=1545884488 instance=ExtResource("19_dbw3f")]
+position = Vector2(349, 471)
+
+[node name="Coins4" parent="." unique_id=1205845240 instance=ExtResource("19_dbw3f")]
+position = Vector2(383, 471)
+
+[node name="Coins5" parent="." unique_id=823093532 instance=ExtResource("19_dbw3f")]
+position = Vector2(418, 471)
+
+[node name="Coins6" parent="." unique_id=600586021 instance=ExtResource("19_dbw3f")]
+position = Vector2(918, 471)
+rotation = 0.027960878
+
+[node name="Coins7" parent="." unique_id=1248260061 instance=ExtResource("19_dbw3f")]
+position = Vector2(950, 471)
+
+[node name="Coins8" parent="." unique_id=906088585 instance=ExtResource("19_dbw3f")]
+position = Vector2(983, 471)
+
+[node name="Coins9" parent="." unique_id=243341409 instance=ExtResource("19_dbw3f")]
+position = Vector2(1017, 471)
+
+[node name="Coins10" parent="." unique_id=1186067110 instance=ExtResource("19_dbw3f")]
+position = Vector2(1052, 471)
+
+[node name="Coins11" parent="." unique_id=1113568782 instance=ExtResource("19_dbw3f")]
+position = Vector2(918, 440)
+
+[node name="Coins12" parent="." unique_id=1662370103 instance=ExtResource("19_dbw3f")]
+position = Vector2(950, 440)
+
+[node name="Coins13" parent="." unique_id=676299537 instance=ExtResource("19_dbw3f")]
+position = Vector2(983, 440)
+
+[node name="Coins14" parent="." unique_id=1668138716 instance=ExtResource("19_dbw3f")]
+position = Vector2(1017, 440)
+
+[node name="Coins15" parent="." unique_id=455292417 instance=ExtResource("19_dbw3f")]
+position = Vector2(1052, 440)
+
+[node name="Coins16" parent="." unique_id=1879249032 instance=ExtResource("19_dbw3f")]
+position = Vector2(918, 410)
+
+[node name="Coins17" parent="." unique_id=1483380126 instance=ExtResource("19_dbw3f")]
+position = Vector2(950, 410)
+
+[node name="Coins18" parent="." unique_id=427042901 instance=ExtResource("19_dbw3f")]
+position = Vector2(983, 410)
+
+[node name="Coins19" parent="." unique_id=107370818 instance=ExtResource("19_dbw3f")]
+position = Vector2(1017, 410)
+
+[node name="Coins20" parent="." unique_id=1644515077 instance=ExtResource("19_dbw3f")]
+position = Vector2(1052, 410)
+
+[node name="Coins21" parent="." unique_id=1351723662 instance=ExtResource("19_dbw3f")]
+position = Vector2(918, 384)
+
+[node name="Coins22" parent="." unique_id=549863194 instance=ExtResource("19_dbw3f")]
+position = Vector2(950, 384)
+
+[node name="Coins46" parent="." unique_id=2146175441 instance=ExtResource("19_dbw3f")]
+position = Vector2(835, 249.99997)
+rotation = 0.027960878
+
+[node name="Coins47" parent="." unique_id=1225719493 instance=ExtResource("19_dbw3f")]
+position = Vector2(867, 250)
+
+[node name="Coins48" parent="." unique_id=1927375633 instance=ExtResource("19_dbw3f")]
+position = Vector2(835, 219)
+
+[node name="Coins49" parent="." unique_id=115064369 instance=ExtResource("19_dbw3f")]
+position = Vector2(867, 219)
+
+[node name="Coins50" parent="." unique_id=1462901400 instance=ExtResource("19_dbw3f")]
+position = Vector2(835, 189)
+
+[node name="Coins51" parent="." unique_id=114531603 instance=ExtResource("19_dbw3f")]
+position = Vector2(867, 189)
+
+[node name="Coins52" parent="." unique_id=1607976727 instance=ExtResource("19_dbw3f")]
+position = Vector2(835, 163)
+
+[node name="Coins53" parent="." unique_id=1413350170 instance=ExtResource("19_dbw3f")]
+position = Vector2(867, 163)
+
+[node name="Coins54" parent="." unique_id=1247874543 instance=ExtResource("19_dbw3f")]
+position = Vector2(474.99997, 121.999954)
+rotation = 0.027960878
+
+[node name="Coins55" parent="." unique_id=1460490959 instance=ExtResource("19_dbw3f")]
+position = Vector2(507, 122)
+
+[node name="Coins56" parent="." unique_id=1402898678 instance=ExtResource("19_dbw3f")]
+position = Vector2(475, 91)
+
+[node name="Coins57" parent="." unique_id=985105111 instance=ExtResource("19_dbw3f")]
+position = Vector2(507, 91)
+
+[node name="Coins58" parent="." unique_id=889779772 instance=ExtResource("19_dbw3f")]
+position = Vector2(475, 61)
+
+[node name="Coins59" parent="." unique_id=355059913 instance=ExtResource("19_dbw3f")]
+position = Vector2(507, 61)
+
+[node name="Coins60" parent="." unique_id=709957453 instance=ExtResource("19_dbw3f")]
+position = Vector2(475, 35)
+
+[node name="Coins61" parent="." unique_id=190995356 instance=ExtResource("19_dbw3f")]
+position = Vector2(507, 35)
+
+[node name="Coins23" parent="." unique_id=1950436419 instance=ExtResource("19_dbw3f")]
+position = Vector2(983, 384)
+
+[node name="Coins24" parent="." unique_id=1547891175 instance=ExtResource("19_dbw3f")]
+position = Vector2(1017, 384)
+
+[node name="Coins25" parent="." unique_id=2110467178 instance=ExtResource("19_dbw3f")]
+position = Vector2(1052, 384)
+
+[node name="Coins26" parent="." unique_id=20876363 instance=ExtResource("19_dbw3f")]
+position = Vector2(1764, 47)
+
+[node name="Coins27" parent="." unique_id=2111094997 instance=ExtResource("19_dbw3f")]
+position = Vector2(1729, 47)
+
+[node name="Coins28" parent="." unique_id=282435729 instance=ExtResource("19_dbw3f")]
+position = Vector2(1764, 16)
+
+[node name="Coins31" parent="." unique_id=1084297940 instance=ExtResource("19_dbw3f")]
+position = Vector2(1729, 16)
+
+[node name="Coins32" parent="." unique_id=641109869 instance=ExtResource("19_dbw3f")]
+position = Vector2(1764, -14)
+
+[node name="Coins33" parent="." unique_id=111844659 instance=ExtResource("19_dbw3f")]
+position = Vector2(1729, -14)
+
+[node name="Coins34" parent="." unique_id=1774515299 instance=ExtResource("19_dbw3f")]
+position = Vector2(1764, -43)
+
+[node name="Coins35" parent="." unique_id=1933844968 instance=ExtResource("19_dbw3f")]
+position = Vector2(1729, -43)
+
+[node name="Coins29" parent="." unique_id=1877542555 instance=ExtResource("19_dbw3f")]
+position = Vector2(1729, 76)
+
+[node name="Coins30" parent="." unique_id=538764614 instance=ExtResource("19_dbw3f")]
+position = Vector2(1764, 76)
+
+[node name="Coins36" parent="." unique_id=1744177345 instance=ExtResource("19_dbw3f")]
+position = Vector2(1608, -35)
+
+[node name="Coins37" parent="." unique_id=1859479662 instance=ExtResource("19_dbw3f")]
+position = Vector2(1573, -35)
+
+[node name="Coins38" parent="." unique_id=206050143 instance=ExtResource("19_dbw3f")]
+position = Vector2(1608, -66)
+
+[node name="Coins39" parent="." unique_id=1232314053 instance=ExtResource("19_dbw3f")]
+position = Vector2(1573, -66)
+
+[node name="Coins40" parent="." unique_id=1270211291 instance=ExtResource("19_dbw3f")]
+position = Vector2(1608, -96)
+
+[node name="Coins41" parent="." unique_id=1186827593 instance=ExtResource("19_dbw3f")]
+position = Vector2(1573, -96)
+
+[node name="Coins42" parent="." unique_id=1170803428 instance=ExtResource("19_dbw3f")]
+position = Vector2(1608, -125)
+
+[node name="Coins43" parent="." unique_id=1299942646 instance=ExtResource("19_dbw3f")]
+position = Vector2(1573, -125)
+
+[node name="Coins44" parent="." unique_id=621454563 instance=ExtResource("19_dbw3f")]
+position = Vector2(1573, -6)
+
+[node name="Coins45" parent="." unique_id=148673607 instance=ExtResource("19_dbw3f")]
+position = Vector2(1608, -6)
+
+[node name="Coin2" parent="." unique_id=881813004 instance=ExtResource("20_pf7t0")]
+position = Vector2(497, 488)
+
+[node name="Coin3" parent="." unique_id=1209434172 instance=ExtResource("20_pf7t0")]
+position = Vector2(529, 461)
+
+[node name="Coin4" parent="." unique_id=1146387675 instance=ExtResource("20_pf7t0")]
+position = Vector2(563, 427)
