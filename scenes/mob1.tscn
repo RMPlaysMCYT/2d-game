@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bc73pi6j5b836"]
 
 [ext_resource type="Texture2D" uid="uid://hg6ejjbfng88" path="res://assets/Character/Yurei/Run.png" id="1_50niv"]
+[ext_resource type="Script" uid="uid://g0y7akwx1e5a" path="res://scripts/mob_1.gd" id="1_454e5"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="2_brruw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brruw"]
@@ -50,6 +51,7 @@ animations = [{
 size = Vector2(56, 71)
 
 [node name="Mob1" type="Node2D" unique_id=1977854298]
+script = ExtResource("1_454e5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304449437]
 texture_filter = 1
@@ -66,3 +68,9 @@ position = Vector2(-9.697887, 1.268959)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/KillZone" unique_id=1131367185]
 position = Vector2(5.6978884, 18.231041)
 shape = SubResource("RectangleShape2D_454e5")
+
+[node name="RayCast2DRight" type="RayCast2D" parent="." unique_id=2123164637]
+target_position = Vector2(47, 0)
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="." unique_id=2136915017]
+target_position = Vector2(-43, 0)
