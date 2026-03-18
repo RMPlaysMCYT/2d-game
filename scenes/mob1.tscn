@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bc73pi6j5b836"]
+
+[ext_resource type="Texture2D" uid="uid://hg6ejjbfng88" path="res://assets/Character/Yurei/Run.png" id="1_50niv"]
+[ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="2_brruw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brruw"]
+atlas = ExtResource("1_50niv")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_454e5"]
+atlas = ExtResource("1_50niv")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4n8t"]
+atlas = ExtResource("1_50niv")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j607a"]
+atlas = ExtResource("1_50niv")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fro5"]
+atlas = ExtResource("1_50niv")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hvvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brruw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_454e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4n8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j607a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fro5")
+}],
+"loop": true,
+"name": &"run",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_454e5"]
+size = Vector2(56, 71)
+
+[node name="Mob1" type="Node2D" unique_id=1977854298]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304449437]
+texture_filter = 1
+position = Vector2(5, -24)
+sprite_frames = SubResource("SpriteFrames_0hvvi")
+animation = &"run"
+autoplay = "run"
+frame = 3
+frame_progress = 0.25675598
+
+[node name="KillZone" parent="AnimatedSprite2D" unique_id=1021461200 instance=ExtResource("2_brruw")]
+position = Vector2(-9.697887, 1.268959)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/KillZone" unique_id=1131367185]
+position = Vector2(5.6978884, 18.231041)
+shape = SubResource("RectangleShape2D_454e5")
