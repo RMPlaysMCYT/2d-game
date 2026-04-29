@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bckcrp8mtifl7" path="res://assets/New Tiles/PNG/Objects/trees2_1.png" id="52_8qfae"]
 [ext_resource type="Texture2D" uid="uid://di4385sym1qw6" path="res://assets/New Tiles/PNG/Objects/trees2_2.png" id="53_hpjxi"]
 [ext_resource type="Texture2D" uid="uid://bu01nlm25sa5f" path="res://assets/New Tiles/PNG/Objects/trees2_3.png" id="54_cb6id"]
+[ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="66_youii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9490,3 +9491,13 @@ autoplay = &"moveenemy1"
 
 [node name="Mob1" parent="." unique_id=1977854298 instance=ExtResource("22_anoxf")]
 position = Vector2(1419, 480)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1635656619]
+scale = Vector2(0.785, 0.785)
+transform = Transform2D(0.785, 0, 0, 0.785, 0, 0)
+
+[node name="Pause" parent="CanvasLayer" unique_id=478105143 instance=ExtResource("66_youii")]
+offset_left = 336.30573
+offset_top = 169.42674
+offset_right = 336.30566
+offset_bottom = 169.42682
