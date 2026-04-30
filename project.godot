@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project G5 Master"
-run/main_scene="uid://ben6gxfthrv4j"
+run/main_scene="uid://bpmrbvaq8p5ws"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

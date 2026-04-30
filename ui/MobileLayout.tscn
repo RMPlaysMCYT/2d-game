@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b3pp2kr0wbvdx"]
+
+[ext_resource type="Texture2D" uid="uid://puqeh88kki20" path="res://assets/ui/dpad_element_east.png" id="1_nfyjv"]
+[ext_resource type="Texture2D" uid="uid://l5x4oj4qor6l" path="res://assets/ui/dpad_element_west.png" id="2_d6gnk"]
+[ext_resource type="Texture2D" uid="uid://bwg61yvnax40c" path="res://assets/ui/button_circle.png" id="3_5frqy"]
+
+[node name="MobileLayout" type="Control" unique_id=129002546]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftBtn" type="TouchScreenButton" parent="." unique_id=165750215]
+position = Vector2(61, 417)
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("1_nfyjv")
+texture_pressed = ExtResource("1_nfyjv")
+action = "ui_left"
+
+[node name="RighTBtn" type="TouchScreenButton" parent="." unique_id=2079043855]
+position = Vector2(348, 417)
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("2_d6gnk")
+texture_pressed = ExtResource("2_d6gnk")
+action = "ui_right"
+
+[node name="JumpBtn" type="TouchScreenButton" parent="." unique_id=2022417621]
+position = Vector2(939, 417)
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("3_5frqy")
+texture_pressed = ExtResource("3_5frqy")
+action = "ui_accept"

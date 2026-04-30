@@ -66,6 +66,8 @@
 [ext_resource type="Texture2D" uid="uid://di4385sym1qw6" path="res://assets/New Tiles/PNG/Objects/trees2_2.png" id="53_hpjxi"]
 [ext_resource type="Texture2D" uid="uid://bu01nlm25sa5f" path="res://assets/New Tiles/PNG/Objects/trees2_3.png" id="54_cb6id"]
 [ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="66_youii"]
+[ext_resource type="PackedScene" uid="uid://b3pp2kr0wbvdx" path="res://ui/MobileLayout.tscn" id="67_361ml"]
+[ext_resource type="Script" uid="uid://y7ub8ff3qvc3" path="res://scripts/ui/mobile_layouts.gd" id="67_nyebm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9501,3 +9503,14 @@ offset_left = 336.30573
 offset_top = 169.42674
 offset_right = 336.30566
 offset_bottom = 169.42682
+
+[node name="MobileLayouts" type="CanvasLayer" parent="." unique_id=2116524871]
+scale = Vector2(0.785, 0.785)
+transform = Transform2D(0.785, 0, 0, 0.785, 0, 0)
+script = ExtResource("67_nyebm")
+
+[node name="MobileLayout" parent="MobileLayouts" unique_id=129002546 instance=ExtResource("67_361ml")]
+offset_left = 304.4586
+offset_top = 169.42674
+offset_right = 304.45862
+offset_bottom = 169.42676

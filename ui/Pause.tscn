@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ctl5u6rd6qder" path="res://scripts/ui/pauseScreen.gd" id="1_6r6nn"]
 
+[sub_resource type="FontVariation" id="FontVariation_6r6nn"]
+
 [node name="Pause" type="Control" unique_id=478105143]
 process_mode = 3
 layout_mode = 3
@@ -18,6 +20,7 @@ offset_left = 483.0
 offset_top = 42.0
 offset_right = 708.0
 offset_bottom = 130.0
+theme_override_fonts/font = SubResource("FontVariation_6r6nn")
 theme_override_font_sizes/font_size = 64
 text = "Paused"
 
