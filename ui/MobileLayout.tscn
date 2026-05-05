@@ -32,3 +32,10 @@ scale = Vector2(2.4, 2.4)
 texture_normal = ExtResource("3_5frqy")
 texture_pressed = ExtResource("3_5frqy")
 action = "ui_accept"
+
+[node name="PauseBtn" type="TouchScreenButton" parent="." unique_id=1206682548]
+position = Vector2(939.00006, 41.00003)
+scale = Vector2(2.4, 2.4)
+texture_normal = ExtResource("3_5frqy")
+texture_pressed = ExtResource("3_5frqy")
+action = "pause_screen"

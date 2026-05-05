@@ -9499,12 +9499,12 @@ scale = Vector2(0.785, 0.785)
 transform = Transform2D(0.785, 0, 0, 0.785, 0, 0)
 
 [node name="Pause" parent="CanvasLayer" unique_id=478105143 instance=ExtResource("66_youii")]
-offset_left = 336.30573
-offset_top = 169.42674
-offset_right = 336.30566
-offset_bottom = 169.42682
+offset_left = 1.5258789e-05
+offset_top = -1.27388
+offset_bottom = -1.2738647
 
 [node name="MobileLayouts" type="CanvasLayer" parent="." unique_id=2116524871]
+visible = false
 scale = Vector2(0.785, 0.785)
 transform = Transform2D(0.785, 0, 0, 0.785, 0, 0)
 script = ExtResource("67_nyebm")

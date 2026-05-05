@@ -13,10 +13,12 @@ func _unhandled_input(event: InputEvent) -> void:
 func pause() -> void:
 	show()
 	get_tree().paused = true
+	get_tree().call_group("mobile_ui", "hide")
 	
 func resume() -> void:
 	hide()
 	get_tree().paused = false
+	get_tree().call_group("mobile_ui", "on_game_resumed")
 
 func _on_quit_btn_pressed() -> void:
 	get_tree().paused = false
