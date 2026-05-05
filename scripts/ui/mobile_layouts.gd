@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var is_on_mobile: bool = false
+#var is_on_mobile: bool = false
 
 func _ready() -> void:
 	add_to_group("mobile_ui")
@@ -8,7 +8,7 @@ func _ready() -> void:
 	var OS_Name = OS.get_name()
 	
 	if OS_Name == "Android" or OS_Name == "iOS":
-		is_on_mobile = true
+		#is_on_mobile = true
 		if Input.get_connected_joypads().size()>0:
 			hide()
 		else:
@@ -17,8 +17,8 @@ func _ready() -> void:
 		hide()
 
 func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
-	if not is_on_mobile:
-		return
+	#if not is_on_mobile:
+		#return
 	if connected:
 		hide()
 	else:
@@ -26,8 +26,8 @@ func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
 			show()
 			
 func _input(event: InputEvent) -> void:
-	if not is_on_mobile:
-		return
+	#if not is_on_mobile:
+		#return
 	if event is InputEventKey or event is InputEventMouseButton:
 		hide()
 	elif event is InputEventScreenTouch:
@@ -35,6 +35,6 @@ func _input(event: InputEvent) -> void:
 			show()
 
 func on_game_resumed() -> void:
-	if is_on_mobile:
-		if Input.get_connected_joypads().size() == 0:
-			show()
+	#if is_on_mobile:
+	if Input.get_connected_joypads().size() == 0:
+		show()
