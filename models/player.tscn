@@ -417,8 +417,9 @@ collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1459513706]
 sprite_frames = SubResource("SpriteFrames_snalp")
-animation = &"double_jump"
+animation = &"dead"
 autoplay = "idle"
+frame_progress = 0.95936376
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=291783554]
 position = Vector2(-0.5, 27)

@@ -4,6 +4,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const MAXJUMPS = 2
 
+var is_player_dead: bool = false
 var JumpCount = 0
 var Coins_Collected: int = 0
 
@@ -13,6 +14,10 @@ var is_attacking: bool = false
 var combo_count: int = 1
 
 func _physics_process(delta: float) -> void:
+	if is_player_dead:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
@@ -32,6 +37,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		update_animation(direction)
 	move_and_slide()
+	
 
 func update_animation(direction):
 	if is_attacking:
@@ -54,8 +60,13 @@ func update_animation(direction):
 		else:
 			animated_sprite.play("idle")
 
-@onready var ScoreCollected = get_node("./Main/player/Camera2D/CanvasLayer/Label")
+@onready var ScoreCollected = $Camera2D/CanvasLayer/ScoreBar
 
 func coinCollected(amount: int = 1)-> void:
 	Coins_Collected += amount
 	ScoreCollected.set_value(Coins_Collected)
+	
+func HarmedByAMob() -> void:
+	is_player_dead = true
+	is_attacking = false
+	animated_sprite.play("dead")
