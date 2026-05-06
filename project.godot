@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2D Game"
-run/main_scene="uid://ben6gxfthrv4j"
+run/main_scene="uid://bpmrbvaq8p5ws"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -50,7 +50,5 @@ ui_cancel={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.37547693, 0.40923643, 0.82378966, 1)

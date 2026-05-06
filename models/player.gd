@@ -54,5 +54,8 @@ func update_animation(direction):
 		else:
 			animated_sprite.play("idle")
 
-#func add_coin(amount: int = 1) -> void:
-	#Coins_Collected += amount
+@onready var ScoreCollected = get_node("./Main/player/Camera2D/CanvasLayer/Label")
+
+func coinCollected(amount: int = 1)-> void:
+	Coins_Collected += amount
+	ScoreCollected.set_value(Coins_Collected)

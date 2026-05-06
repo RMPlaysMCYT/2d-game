@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bckcrp8mtifl7" path="res://assets/New Tiles/PNG/Objects/trees2_1.png" id="52_8qfae"]
 [ext_resource type="Texture2D" uid="uid://di4385sym1qw6" path="res://assets/New Tiles/PNG/Objects/trees2_2.png" id="53_hpjxi"]
 [ext_resource type="Texture2D" uid="uid://bu01nlm25sa5f" path="res://assets/New Tiles/PNG/Objects/trees2_3.png" id="54_cb6id"]
+[ext_resource type="PackedScene" uid="uid://b8h1gvtqsldb" path="res://ui/NumberBar.tscn" id="61_youii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9275,6 +9276,21 @@ offset_right = -73.0
 offset_bottom = -106.0
 text = "Coin Count: 0"
 label_settings = SubResource("LabelSettings_pkblq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="player/Camera2D" unique_id=1315529357]
+
+[node name="Label" parent="player/Camera2D/CanvasLayer" unique_id=768195172 instance=ExtResource("61_youii")]
+anchors_preset = -1
+anchor_left = 0.41500002
+anchor_top = 0.87500006
+anchor_right = 1.0630001
+anchor_bottom = 1.501
+offset_left = -454.08002
+offset_top = -549.00006
+offset_right = -1136.576
+offset_bottom = -920.648
+theme_override_font_sizes/font_size = 24
+LabelName = "Score"
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
 

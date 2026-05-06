@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://wptoe67e7vhx" path="res://scripts/ui/v_box_container.gd" id="1_3ydky"]
 [ext_resource type="PackedScene" uid="uid://bqgf1de1eaht" path="res://ui/AudioSliders.tscn" id="3_r4ypb"]
-[ext_resource type="Script" uid="uid://gnrxuckhjvq0" path="res://scripts/ui/setFullScreen.gd" id="3_t2vec"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa6so"]
 bg_color = Color(0.7879494, 0.48278427, 0.6951937, 1)
@@ -291,7 +290,7 @@ offset_right = 310.0
 offset_bottom = 500.0
 theme_override_font_sizes/font_size = 24
 text = " SET FULLSCREEN"
-script = ExtResource("3_t2vec")
+script = ExtResource("1_3ydky")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
@@ -299,4 +298,4 @@ script = ExtResource("3_t2vec")
 [connection signal="pressed" from="VBoxContainer/Options" to="VBoxContainer" method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer" method="_on_exit_pressed"]
 [connection signal="pressed" from="OptionsPanel/CloseOptionsBtn" to="VBoxContainer" method="_on_close_options_btn_pressed"]
-[connection signal="toggled" from="OptionsPanel/CheckButton" to="OptionsPanel/CheckButton" method="_on_toggled"]
+[connection signal="toggled" from="OptionsPanel/CheckButton" to="VBoxContainer" method="_on_check_button_toggled"]

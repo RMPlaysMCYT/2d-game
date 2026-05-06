@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b8h1gvtqsldb"]
+
+[ext_resource type="Script" uid="uid://djq21rukfijwp" path="res://scripts/ui/number_bar.gd" id="1_apglc"]
+
+[node name="Label" type="Label" unique_id=768195172]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_apglc")
