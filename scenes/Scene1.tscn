@@ -9494,4 +9494,5 @@ libraries/ = SubResource("AnimationLibrary_anoxf")
 autoplay = &"moveenemy1"
 
 [node name="Mob1" parent="." unique_id=1977854298 instance=ExtResource("22_anoxf")]
+light_mask = 1
 position = Vector2(1419, 480)

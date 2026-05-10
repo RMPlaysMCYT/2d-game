@@ -51,6 +51,7 @@ animations = [{
 size = Vector2(56, 71)
 
 [node name="Mob1" type="Node2D" unique_id=1977854298]
+light_mask = 2
 script = ExtResource("1_454e5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304449437]
