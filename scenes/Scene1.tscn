@@ -9178,7 +9178,7 @@ _data = {
 }
 
 [node name="Main" type="Node2D" unique_id=199653027]
-position = Vector2(640, 360)
+position = Vector2(641, 360)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=434524370]
 z_index = 2
