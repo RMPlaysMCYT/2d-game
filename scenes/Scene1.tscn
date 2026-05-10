@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://di4385sym1qw6" path="res://assets/New Tiles/PNG/Objects/trees2_2.png" id="53_hpjxi"]
 [ext_resource type="Texture2D" uid="uid://bu01nlm25sa5f" path="res://assets/New Tiles/PNG/Objects/trees2_3.png" id="54_cb6id"]
 [ext_resource type="PackedScene" uid="uid://b8h1gvtqsldb" path="res://ui/NumberBar.tscn" id="61_youii"]
+[ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="62_361ml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9277,9 +9278,15 @@ offset_left = -454.08002
 offset_top = -549.00006
 offset_right = -1136.576
 offset_bottom = -920.648
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 40
 text = "Score: 0"
 LabelName = "Score"
+
+[node name="Hud" parent="player/Camera2D/CanvasLayer" unique_id=1685125644 instance=ExtResource("62_361ml")]
+offset_left = -3.0
+offset_top = -5.0
+offset_right = -3.0
+offset_bottom = -5.0
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
 
