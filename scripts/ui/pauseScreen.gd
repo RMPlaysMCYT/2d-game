@@ -1,5 +1,32 @@
 extends Control
 
+@onready var ScoreLabel = $"../../CanvasLayer3/ScoreBar"
+
+func _ready():
+	hide()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause_game"):
+		if get_tree().paused:
+			resume()
+		else:
+			pause()
+
+func pause() -> void:
+	show()
+	ScoreLabel.visible = false
+	get_tree().paused = true
+	get_tree().call_group("mobile_ui", "hide")
+	
+func resume() -> void:
+	hide()
+	ScoreLabel.visible = true
+	get_tree().paused = false
+	get_tree().call_group("mobile_ui", "on_game_resumed")
 
 func _on_quit_btn_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://ui/Main.tscn")
+
+func _on_resume_butn_pressed() -> void:
+	resume()

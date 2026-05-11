@@ -60,7 +60,7 @@ func update_animation(direction):
 		else:
 			animated_sprite.play("idle")
 
-@onready var ScoreCollected = $Camera2D/CanvasLayer/ScoreBar
+@onready var ScoreCollected = $Camera2D/CanvasLayer3/ScoreBar
 
 func coinCollected(amount: int = 1)-> void:
 	Coins_Collected += amount
