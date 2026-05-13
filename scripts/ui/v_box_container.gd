@@ -2,7 +2,7 @@ extends VBoxContainer
 
 @onready var MenuLabels = $"../Label"
 @onready var MenuLabels2 = $"../Label2"
-@onready var OptionsLabel = $"../Label3"
+@onready var OptionsLabel = $"../OptionsPanel/Label3"
 @onready var mainMenu = $"."
 @onready var options = $"../OptionsPanel"
 
