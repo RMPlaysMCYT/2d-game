@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://si6rx47ubcl3"]
+
+[ext_resource type="Texture2D" uid="uid://cavct3usweo1a" path="res://assets/New Tiles/PNG/Objects/rectangle5.png" id="1_b2nk0"]
+
+[node name="FinishLinePoint" type="Area2D" unique_id=789232015]
+
+[node name="Rectangle5" type="Sprite2D" parent="." unique_id=1270771775]
+texture_filter = 1
+position = Vector2(10, 9)
+texture = ExtResource("1_b2nk0")
