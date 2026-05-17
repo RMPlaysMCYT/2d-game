@@ -9511,6 +9511,6 @@ position = Vector2(1419, 480)
 [node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("70_kc17w")]
 position = Vector2(2725, 248)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="FinishLinePoint" unique_id=522728991]
-position = Vector2(10.5, 2)
+[node name="FinishLinePointColl" type="CollisionShape2D" parent="FinishLinePoint" unique_id=522728991]
+position = Vector2(11, 6)
 shape = SubResource("RectangleShape2D_kc17w")
