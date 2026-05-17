@@ -69,6 +69,7 @@
 [ext_resource type="PackedScene" uid="uid://b8h1gvtqsldb" path="res://ui/NumberBar.tscn" id="61_youii"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="62_361ml"]
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="62_mf60r"]
+[ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="70_kc17w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9186,6 +9187,9 @@ _data = {
 &"moveenemy1": SubResource("Animation_pf7t0")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc17w"]
+size = Vector2(43, 36)
+
 [node name="Main" type="Node2D" unique_id=199653027]
 position = Vector2(641, 360)
 
@@ -9503,3 +9507,10 @@ autoplay = &"moveenemy1"
 [node name="Mob1" parent="." unique_id=1977854298 instance=ExtResource("22_anoxf")]
 light_mask = 1
 position = Vector2(1419, 480)
+
+[node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("70_kc17w")]
+position = Vector2(2725, 248)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FinishLinePoint" unique_id=522728991]
+position = Vector2(10.5, 2)
+shape = SubResource("RectangleShape2D_kc17w")
