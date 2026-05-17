@@ -9248,8 +9248,11 @@ script = ExtResource("3_jb1ob")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1633857640]
 position = Vector2(80, -27)
-zoom = Vector2(1.52, 1.52)
-limit_bottom = 995
+zoom = Vector2(2.225, 2.225)
+limit_left = -9999995
+limit_top = -10000001
+limit_right = 10000005
+limit_bottom = 994
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player/Camera2D" unique_id=93400544]
 libraries/ = SubResource("AnimationLibrary_5eoqb")
@@ -9257,15 +9260,10 @@ libraries/ = SubResource("AnimationLibrary_5eoqb")
 [node name="CanvasLayer3" type="CanvasLayer" parent="player/Camera2D" unique_id=310547944]
 
 [node name="ScoreBar" parent="player/Camera2D/CanvasLayer3" unique_id=768195172 instance=ExtResource("61_youii")]
-anchors_preset = -1
-anchor_left = 0.41500002
-anchor_top = 0.87500006
-anchor_right = 1.0630001
-anchor_bottom = 1.501
-offset_left = -454.08002
-offset_top = -549.00006
-offset_right = -288.08002
-offset_bottom = -488.00006
+offset_left = 36.0
+offset_top = 31.0
+offset_right = 202.0
+offset_bottom = 92.0
 theme_override_font_sizes/font_size = 44
 text = "Score: 0"
 LabelName = "Score"
@@ -9274,6 +9272,8 @@ LabelName = "Score"
 script = ExtResource("62_mf60r")
 
 [node name="Hud" parent="player/Camera2D/CanvasLayer" unique_id=1685125644 instance=ExtResource("62_361ml")]
+anchor_right = 1.0026041
+anchor_bottom = 0.9228395
 offset_left = -3.0
 offset_top = -5.0
 offset_right = -3.0
