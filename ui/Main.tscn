@@ -95,31 +95,41 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=1081623565]
-layout_mode = 0
-offset_left = 669.0
-offset_top = 614.0
-offset_right = 1141.0
-offset_bottom = 637.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -472.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
 text = "VERSION 1.0.0 - G5 Gaming and BlueHeart Interactive Studios"
 
 [node name="Label2" type="Label" parent="." unique_id=876565388]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 49.0
-offset_right = 681.0
-offset_bottom = 137.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -302.5
+offset_right = 302.5
+offset_bottom = 88.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "Project G5 Platform"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1835213942]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 76.0
-offset_top = 263.0
-offset_right = -689.0
-offset_bottom = -160.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -81.0
+offset_right = -38.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
@@ -166,18 +176,24 @@ autoplay = true
 bus = &"Music"
 
 [node name="OptionsPanel" type="Panel" parent="." unique_id=766041407]
-visible = false
-layout_mode = 0
-offset_left = 232.0
-offset_top = 88.0
-offset_right = 973.0
-offset_bottom = 614.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -370.5
+offset_top = -263.0
+offset_right = 370.5
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label5" type="Label" parent="OptionsPanel" unique_id=306874007]
-layout_mode = 0
-offset_left = -156.0
-offset_top = -88.0
-offset_right = 449.0
+layout_mode = 1
+offset_left = 18.5
+offset_right = 623.5
+offset_bottom = 88.0
 theme_override_font_sizes/font_size = 64
 text = "OPTIONS"
 
