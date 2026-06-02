@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpmrbvaq8p5ws"]
 
 [ext_resource type="Script" uid="uid://wptoe67e7vhx" path="res://scripts/ui/v_box_container.gd" id="1_3ydky"]
+[ext_resource type="Script" uid="uid://bishj3m1yv3uo" path="res://scripts/ui/options_panel.gd" id="2_t2vec"]
 [ext_resource type="PackedScene" uid="uid://bqgf1de1eaht" path="res://ui/AudioSliders.tscn" id="3_r4ypb"]
 [ext_resource type="Script" uid="uid://gnrxuckhjvq0" path="res://scripts/ui/setFullScreen.gd" id="3_t2vec"]
 
@@ -188,6 +189,7 @@ offset_right = 370.5
 offset_bottom = 263.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_t2vec")
 
 [node name="Label5" type="Label" parent="OptionsPanel" unique_id=306874007]
 layout_mode = 1
