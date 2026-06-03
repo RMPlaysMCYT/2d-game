@@ -12,7 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6r6nn")
 
-[node name="Label" type="Label" parent="." unique_id=549489903]
+[node name="Panel" type="Panel" parent="." unique_id=1211699813]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=549489903]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -25,7 +30,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "Paused"
 
-[node name="ResumeButn" type="Button" parent="." unique_id=1200283992]
+[node name="ResumeButn" type="Button" parent="Panel" unique_id=1200283992]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -38,7 +43,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "RESUME"
 
-[node name="OptionsButn" type="Button" parent="." unique_id=1159998873]
+[node name="OptionsButn" type="Button" parent="Panel" unique_id=1159998873]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -51,7 +56,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
-[node name="QuitBtn" type="Button" parent="." unique_id=639759065]
+[node name="QuitBtn" type="Button" parent="Panel" unique_id=639759065]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.49074075
@@ -65,5 +70,5 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="ResumeButn" to="." method="_on_resume_butn_pressed"]
-[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Panel/ResumeButn" to="." method="_on_resume_butn_pressed"]
+[connection signal="pressed" from="Panel/QuitBtn" to="." method="_on_quit_btn_pressed"]

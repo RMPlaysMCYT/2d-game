@@ -9287,10 +9287,6 @@ offset_bottom = 31.0
 
 [node name="Pause" parent="player/Camera2D/CanvasLayer2" unique_id=478105143 instance=ExtResource("61_nyebm")]
 process_mode = 3
-offset_left = 36.0
-offset_top = 31.0
-offset_right = 36.0
-offset_bottom = 31.0
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
 
