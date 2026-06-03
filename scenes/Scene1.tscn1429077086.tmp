@@ -9680,5 +9680,5 @@ position = Vector2(1419, 480)
 position = Vector2(2725, 248)
 
 [node name="FinishLinePointColl" type="CollisionShape2D" parent="FinishLinePoint" unique_id=522728991]
-position = Vector2(9, 1)
+position = Vector2(11, 6)
 shape = SubResource("RectangleShape2D_kc17w")
