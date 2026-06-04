@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bw28xkvm2483o"]
 
+[ext_resource type="Script" uid="uid://djq21rukfijwp" path="res://scripts/ui/number_bar.gd" id="1_wxkr7"]
+
 [node name="FinishLevel" type="Control" unique_id=1444370451]
 layout_mode = 3
 anchors_preset = 15
@@ -32,6 +34,7 @@ offset_right = 753.0
 offset_bottom = 290.0
 theme_override_font_sizes/font_size = 32
 text = "Total Coins Collected: 0"
+script = ExtResource("1_wxkr7")
 
 [node name="QuitGameBtn" type="Button" parent="Panel" unique_id=1703136115]
 layout_mode = 0
