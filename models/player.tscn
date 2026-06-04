@@ -412,7 +412,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uc0rf"]
 size = Vector2(45, 74)
 
-[node name="Player" type="CharacterBody2D" unique_id=686976790]
+[node name="Player" type="CharacterBody2D" unique_id=686976790 groups=["player"]]
 collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1459513706]

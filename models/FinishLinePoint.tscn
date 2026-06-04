@@ -11,8 +11,9 @@ collision_mask = 2
 script = ExtResource("1_qb80d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97471954]
+light_mask = 2
+visibility_layer = 2
 shape = SubResource("RectangleShape2D_qb80d")
-disabled = true
 
 [node name="Rectangle5" type="Sprite2D" parent="." unique_id=1270771775]
 texture_filter = 1

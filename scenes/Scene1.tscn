@@ -71,6 +71,7 @@
 [ext_resource type="PackedScene" uid="uid://b8h1gvtqsldb" path="res://ui/NumberBar.tscn" id="61_youii"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="62_361ml"]
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="62_mf60r"]
+[ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="70_kc17w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8quxp"]
 texture = ExtResource("1_8quxp")
@@ -9668,3 +9669,6 @@ autoplay = &"moveenemy1"
 [node name="Mob1" parent="." unique_id=1977854298 instance=ExtResource("22_anoxf")]
 light_mask = 1
 position = Vector2(1419, 480)
+
+[node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("70_kc17w")]
+position = Vector2(2734, 255)
