@@ -59,6 +59,7 @@ animations = [{
 }]
 
 [node name="BombO" type="Area2D" unique_id=744291660]
+collision_mask = 2
 script = ExtResource("1_wji4e")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1540223189]

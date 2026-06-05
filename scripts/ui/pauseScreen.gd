@@ -2,16 +2,23 @@ extends Control
 
 @onready var ScoreLabel = $"../../ScoreLayerCanvas/ScoreBar"
 
-func _ready():
-	process_mode = Node.PROCESS_MODE_ALWAYS
+func _ready() -> void:
 	hide()
+	# REQUIRED: allows this node to receive input even while the tree is paused
+	# (so ESC can resume the game)
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause_game"):
-		if get_tree().paused:
-			resume()
-		else:
-			pause()
+	if not event.is_action_pressed("pause_game"):
+		return
+	# GUARD: if the game is already paused but THIS screen isn't visible,
+	# something else paused it (e.g. Level Complete). Don't interfere.
+	if get_tree().paused and not visible:
+		return
+	if get_tree().paused:
+		resume()
+	else:
+		pause()
 
 func pause() -> void:
 	show()

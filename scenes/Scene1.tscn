@@ -12,8 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://cpwklsx7swvb3" path="res://assets/Tiles/winter_.png" id="6_6eqy8"]
 [ext_resource type="Texture2D" uid="uid://dnepbxbukirrx" path="res://assets/Environment/Layer_0011_0.png" id="6_dbw3f"]
 [ext_resource type="Script" uid="uid://djq21rukfijwp" path="res://scripts/ui/number_bar.gd" id="12_so5j8"]
+[ext_resource type="PackedScene" uid="uid://bw28xkvm2483o" path="res://ui/LevelComplete.tscn" id="16_ec3w0"]
+[ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="17_dbw3f"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="19_dbw3f"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="20_5eoqb"]
+[ext_resource type="PackedScene" uid="uid://bowmqdans50a3" path="res://models/BombO.tscn" id="20_pf7t0"]
 [ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="61_nyebm"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="62_361ml"]
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="62_mf60r"]
@@ -1304,6 +1307,50 @@ sources/5 = SubResource("TileSetAtlasSource_ti2ko")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x0ogb"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_anoxf"]
+radius = 14.3178215
+
+[sub_resource type="Animation" id="Animation_5eoqb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1552, -112)]
+}
+
+[sub_resource type="Animation" id="Animation_sg05v"]
+resource_name = "move"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.49, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1552, -112), Vector2(1486, -112), Vector2(1552, -112)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0dck"]
+_data = {
+&"RESET": SubResource("Animation_5eoqb"),
+&"move": SubResource("Animation_sg05v")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5eoqb"]
+radius = 15.132746
+
 [node name="Node2D" type="Node2D" unique_id=504143887]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=828054731]
@@ -1369,6 +1416,11 @@ offset_top = 16.0
 offset_right = 294.0
 offset_bottom = 16.0
 
+[node name="WinnerCanvasLayer" type="CanvasLayer" parent="player/Camera2D" unique_id=1008620658]
+
+[node name="FinishLevel" parent="player/Camera2D/WinnerCanvasLayer" unique_id=1444370451 instance=ExtResource("16_ec3w0")]
+visible = false
+
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("20_5eoqb")]
 position = Vector2(434, 309)
 
@@ -1387,6 +1439,39 @@ position = Vector2(170, -20)
 
 [node name="Coins3" parent="Coins" unique_id=2004716057 instance=ExtResource("19_dbw3f")]
 position = Vector2(202, -20)
+
+[node name="Coins25" parent="Coins" unique_id=108635911 instance=ExtResource("19_dbw3f")]
+position = Vector2(978, -39)
+
+[node name="Coins26" parent="Coins" unique_id=39997720 instance=ExtResource("19_dbw3f")]
+position = Vector2(1009, -39)
+
+[node name="Coins27" parent="Coins" unique_id=345839595 instance=ExtResource("19_dbw3f")]
+position = Vector2(1041, -39)
+
+[node name="Coins28" parent="Coins" unique_id=529034280 instance=ExtResource("19_dbw3f")]
+position = Vector2(978, -68)
+
+[node name="Coins29" parent="Coins" unique_id=214199640 instance=ExtResource("19_dbw3f")]
+position = Vector2(1009, -68)
+
+[node name="Coins31" parent="Coins" unique_id=2133800759 instance=ExtResource("19_dbw3f")]
+position = Vector2(1279, -82)
+
+[node name="Coins32" parent="Coins" unique_id=252578049 instance=ExtResource("19_dbw3f")]
+position = Vector2(1310, -82)
+
+[node name="Coins33" parent="Coins" unique_id=1858653076 instance=ExtResource("19_dbw3f")]
+position = Vector2(1342, -82)
+
+[node name="Coins34" parent="Coins" unique_id=166652076 instance=ExtResource("19_dbw3f")]
+position = Vector2(1218, -82)
+
+[node name="Coins35" parent="Coins" unique_id=1689336387 instance=ExtResource("19_dbw3f")]
+position = Vector2(1248, -82)
+
+[node name="Coins30" parent="Coins" unique_id=547564560 instance=ExtResource("19_dbw3f")]
+position = Vector2(1041, -68)
 
 [node name="Coins4" parent="Coins" unique_id=2125611531 instance=ExtResource("19_dbw3f")]
 position = Vector2(139, -51)
@@ -1450,3 +1535,29 @@ position = Vector2(669, -111)
 
 [node name="Coins24" parent="Coins" unique_id=1805092553 instance=ExtResource("19_dbw3f")]
 position = Vector2(701, -111)
+
+[node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("17_dbw3f")]
+position = Vector2(4326, -138)
+
+[node name="Enemy" type="Node" parent="." unique_id=1253159976]
+
+[node name="BombO" parent="Enemy" unique_id=744291660 instance=ExtResource("20_pf7t0")]
+position = Vector2(1552, -112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/BombO" unique_id=589653156]
+shape = SubResource("CircleShape2D_anoxf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/BombO" unique_id=1986559375]
+libraries/ = SubResource("AnimationLibrary_s0dck")
+autoplay = &"move"
+
+[node name="BombO2" parent="Enemy" unique_id=1101040275 instance=ExtResource("20_pf7t0")]
+position = Vector2(556, -17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/BombO2" unique_id=309789774]
+shape = SubResource("CircleShape2D_5eoqb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/BombO2" unique_id=805520033]
+
+[connection signal="body_entered" from="Enemy/BombO" to="Enemy/BombO" method="_on_body_entered"]
+[connection signal="body_entered" from="Enemy/BombO2" to="Enemy/BombO" method="_on_body_entered"]

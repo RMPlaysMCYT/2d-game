@@ -1,17 +1,24 @@
 extends Area2D
 
-const WIN_SCREEN = preload("res://ui/LevelComplete.tscn")
-
-var triggered = false
-
-func _ready() -> void:
-	print("FinishLinePoint ready at position: ", global_position)
+var _triggered := false
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and not triggered:
-		triggered = true
-		var screen = WIN_SCREEN.instantiate()
-		screen.process_mode = Node.PROCESS_MODE_ALWAYS  # add this
-		get_tree().root.add_child(screen)
-		screen.get_node("Panel/Score").set_value(body.Coins_Collected)
-		get_tree().paused = true
+	if not body.is_in_group("player") or _triggered:
+		return
+	_triggered = true
+	_show_win_screen(body.Coins_Collected)
+
+func _show_win_screen(coins: int) -> void:
+	# A dedicated CanvasLayer at layer 128 guarantees this renders
+	# above ALL game UI (HUD, camera layers, etc.)
+	var canvas := CanvasLayer.new()
+	canvas.layer = 128
+	canvas.process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().root.add_child(canvas)
+
+	var screen: Control = preload("res://ui/LevelComplete.tscn").instantiate()
+	screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	canvas.add_child(screen)
+
+	screen.get_node("Panel/Score").set_value(coins)
+	get_tree().paused = true
