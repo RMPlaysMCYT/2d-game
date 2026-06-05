@@ -1,8 +1,9 @@
 extends Control
 
-@onready var ScoreLabel = $"../../CanvasLayer3/ScoreBar"
+@onready var ScoreLabel = $"../../ScoreLayerCanvas/ScoreBar"
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -17,7 +18,7 @@ func pause() -> void:
 	ScoreLabel.visible = false
 	get_tree().paused = true
 	get_tree().call_group("mobile_ui", "hide")
-	
+
 func resume() -> void:
 	hide()
 	ScoreLabel.visible = true

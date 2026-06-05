@@ -16,59 +16,63 @@ script = ExtResource("1_6r6nn")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+scale = Vector2(1.0799997, 1.0799998)
 
-[node name="Label" type="Label" parent="Panel" unique_id=549489903]
+[node name="Label" type="Label" parent="Panel" unique_id=743946842]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -114.0
-offset_top = 37.0
-offset_right = 111.0
-offset_bottom = 125.0
+offset_left = -122.29617
+offset_top = 42.5926
+offset_right = 102.70386
+offset_bottom = 130.5926
 grow_horizontal = 2
+scale = Vector2(0.9896245, 1)
 theme_override_font_sizes/font_size = 64
 text = "Paused"
 
-[node name="ResumeButn" type="Button" parent="Panel" unique_id=1200283992]
+[node name="ResumeButn" type="Button" parent="Panel" unique_id=1975430561]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 60.0
-offset_top = -122.0
-offset_right = 462.0
-offset_bottom = -26.0
+offset_left = 55.55557
+offset_top = -136.96294
+offset_right = 457.55557
+offset_bottom = -40.96295
 grow_vertical = 2
+scale = Vector2(0.9896245, 1)
 theme_override_font_sizes/font_size = 40
 text = "RESUME"
 
-[node name="OptionsButn" type="Button" parent="Panel" unique_id=1159998873]
+[node name="OptionsButn" type="Button" parent="Panel" unique_id=1427959217]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 60.0
-offset_top = 2.0
-offset_right = 462.0
-offset_bottom = 98.0
+offset_left = 55.55557
+offset_top = -22.148102
+offset_right = 457.55557
+offset_bottom = 73.8519
 grow_vertical = 2
+scale = Vector2(0.9896245, 1)
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
-[node name="QuitBtn" type="Button" parent="Panel" unique_id=639759065]
+[node name="QuitBtn" type="Button" parent="Panel" unique_id=1517850123]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.49074075
 anchor_bottom = 0.49074075
-offset_left = 60.0
-offset_top = 137.0
-offset_right = 462.0
-offset_bottom = 233.0
+offset_left = 55.55557
+offset_top = 103.29636
+offset_right = 457.55557
+offset_bottom = 199.29639
 grow_vertical = 2
+scale = Vector2(0.9896245, 1)
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Panel/ResumeButn" to="." method="_on_resume_butn_pressed"]
-[connection signal="pressed" from="Panel/QuitBtn" to="." method="_on_quit_btn_pressed"]

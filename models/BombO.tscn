@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bowmqdans50a3"]
+
+[ext_resource type="Texture2D" uid="uid://cjsse568tt8vh" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_F_1.png" id="1_msidr"]
+[ext_resource type="Script" uid="uid://b82jtfqqxi2uh" path="res://models/enemy_1.gd" id="1_wji4e"]
+[ext_resource type="Texture2D" uid="uid://khdc6f6cknll" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_F_2.png" id="2_wji4e"]
+[ext_resource type="Texture2D" uid="uid://dxwus1bh1gq01" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_F_3.png" id="3_qnkj6"]
+[ext_resource type="Texture2D" uid="uid://i7uwh86mgdsm" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_F_4.png" id="4_l5b44"]
+[ext_resource type="Texture2D" uid="uid://bisjwj1sr6rnl" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_L_1.png" id="5_h46on"]
+[ext_resource type="Texture2D" uid="uid://cuhcqadypf0te" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_L_2.png" id="6_gckw1"]
+[ext_resource type="Texture2D" uid="uid://vko6awvh7apb" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_L_3.png" id="7_jfa46"]
+[ext_resource type="Texture2D" uid="uid://jjbyxhbd8kna" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_L_4.png" id="8_wec6m"]
+[ext_resource type="Texture2D" uid="uid://bdd483p70bfsr" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_R_1.png" id="9_gcta0"]
+[ext_resource type="Texture2D" uid="uid://c2weodcr20lxm" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_R_2.png" id="10_74xrd"]
+[ext_resource type="Texture2D" uid="uid://b3o03o6bbvfue" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_R_3.png" id="11_jucmk"]
+[ext_resource type="Texture2D" uid="uid://dj6os4rxjfym5" path="res://assets/Character/Balloon/Balloon_1/Idle_1/Idle_1_R_4.png" id="12_ewb18"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xee7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_msidr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wji4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qnkj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l5b44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h46on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gckw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jfa46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wec6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gcta0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_74xrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jucmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ewb18")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BombO" type="Area2D" unique_id=744291660]
+script = ExtResource("1_wji4e")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1540223189]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=780129503]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_xee7f")
+animation = &"idle"
+
+[node name="Timer2" type="Timer" parent="." unique_id=1577982550]
+
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

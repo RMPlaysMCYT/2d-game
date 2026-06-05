@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -400.0
 const MAXJUMPS = 2
 
 var is_player_dead: bool = false
@@ -60,7 +60,7 @@ func update_animation(direction):
 		else:
 			animated_sprite.play("idle")
 
-@onready var ScoreCollected = $Camera2D/CanvasLayer3/ScoreBar
+@onready var ScoreCollected = $Camera2D/ScoreLayerCanvas/ScoreBar
 
 func coinCollected(amount: int = 1)-> void:
 	Coins_Collected += amount
