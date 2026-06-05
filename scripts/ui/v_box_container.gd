@@ -4,6 +4,7 @@ extends VBoxContainer
 @onready var MenuLabels2 = $"../Label2"
 @onready var OptionsLabel = $"../OptionsPanel/AudioPanel/Label3"
 @onready var options = $"../OptionsPanel"
+@onready var LevelSelectiones = $"../LevelSelection"
 
 # Added @onready and changed "Audio" to "Master" (assuming default setup)
 @onready var audio_bus_id = AudioServer.get_bus_index("Master") 
@@ -13,11 +14,16 @@ func _ready()-> void:
 	MenuLabels.show()
 	MenuLabels2.show()
 	show() # Replaced mainMenu.show()
+	LevelSelectiones.hide()
 	options.hide()
 	OptionsLabel.hide()
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Scene1.tscn")
+	MenuLabels.hide()
+	MenuLabels2.hide()
+	LevelSelectiones.show()
+	
+	#get_tree().change_scene_to_file("res://scenes/Scene1.tscn")
 
 func _on_load_pressed() -> void:
 	pass
@@ -48,3 +54,24 @@ func _on_audio_slider_value_changed(value: float) -> void:
 func _on_sfx_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(sfx_bus_id, linear_to_db(value / 100.0))
 	AudioServer.set_bus_mute(sfx_bus_id, value == 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func _on_LevelSelection_back_btn_pressed() -> void:
+	MenuLabels.show()
+	MenuLabels2.show()
+	LevelSelectiones.hide()
