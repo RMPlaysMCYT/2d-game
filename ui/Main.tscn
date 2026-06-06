@@ -439,6 +439,7 @@ offset_bottom = 632.0
 text = "Back"
 
 [node name="lvl1_completed" type="ColorRect" parent="LevelSelection" unique_id=332070636]
+visible = false
 layout_mode = 0
 offset_left = 152.0
 offset_top = 224.0
@@ -447,6 +448,7 @@ offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
 [node name="lvl2_completed" type="ColorRect" parent="LevelSelection" unique_id=258648027]
+visible = false
 layout_mode = 0
 offset_left = 304.0
 offset_top = 224.0
@@ -455,6 +457,7 @@ offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
 [node name="lvl3_completed" type="ColorRect" parent="LevelSelection" unique_id=1287665274]
+visible = false
 layout_mode = 0
 offset_left = 456.0
 offset_top = 224.0
@@ -463,6 +466,7 @@ offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
 [node name="lvl4_completed" type="ColorRect" parent="LevelSelection" unique_id=1580077767]
+visible = false
 layout_mode = 0
 offset_left = 608.0
 offset_top = 224.0
@@ -471,6 +475,7 @@ offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
 [node name="lvl5_completed" type="ColorRect" parent="LevelSelection" unique_id=1299262890]
+visible = false
 layout_mode = 0
 offset_left = 760.0
 offset_top = 224.0
@@ -479,6 +484,7 @@ offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
 [node name="lvl6_completed" type="ColorRect" parent="LevelSelection" unique_id=602856518]
+visible = false
 layout_mode = 0
 offset_left = 912.0
 offset_top = 224.0
