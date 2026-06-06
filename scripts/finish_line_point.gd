@@ -7,6 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	_triggered = true
 	_show_win_screen(body.Coins_Collected)
+	LevelSelectionCore.level1_completed = true
 
 func _show_win_screen(coins: int) -> void:
 	# A dedicated CanvasLayer at layer 128 guarantees this renders

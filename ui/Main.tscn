@@ -181,6 +181,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="OptionsPanel" type="Panel" parent="." unique_id=766041407]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -350,7 +351,6 @@ offset_bottom = 490.0
 text = "CONTROLS"
 
 [node name="LevelSelection" type="Panel" parent="." unique_id=2051393607]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -365,56 +365,67 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Level1Btn" type="Button" parent="LevelSelection" unique_id=167104853]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 152.0
-offset_top = 224.0
-offset_right = 280.0
-offset_bottom = 360.0
+offset_left = 144.0
+offset_top = 215.5
+offset_right = 288.0
+offset_bottom = 368.5
 theme_override_font_sizes/font_size = 48
 text = "1"
 
 [node name="Level2Btn" type="Button" parent="LevelSelection" unique_id=374173326]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 304.0
-offset_top = 224.0
-offset_right = 432.0
-offset_bottom = 360.0
+offset_left = 296.0
+offset_top = 216.0
+offset_right = 424.0
+offset_bottom = 350.36
+scale = Vector2(1.1386088, 1.1481429)
 theme_override_font_sizes/font_size = 48
 text = "2"
 
 [node name="Level3Btn" type="Button" parent="LevelSelection" unique_id=1294276038]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 456.0
-offset_top = 224.0
-offset_right = 584.0
-offset_bottom = 360.0
+offset_left = 448.0
+offset_top = 216.0
+offset_right = 576.0
+offset_bottom = 350.36
+scale = Vector2(1.1386088, 1.1481429)
 theme_override_font_sizes/font_size = 48
 text = "3"
 
 [node name="Level4Btn" type="Button" parent="LevelSelection" unique_id=354753391]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 608.0
-offset_top = 224.0
-offset_right = 736.0
-offset_bottom = 360.0
+offset_left = 600.0
+offset_top = 216.0
+offset_right = 728.0
+offset_bottom = 350.36
+scale = Vector2(1.1386088, 1.1481429)
 theme_override_font_sizes/font_size = 48
 text = "4"
 
 [node name="Level5Btn" type="Button" parent="LevelSelection" unique_id=1381843898]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 760.0
-offset_top = 224.0
-offset_right = 888.0
-offset_bottom = 360.0
+offset_left = 752.0
+offset_top = 216.0
+offset_right = 880.0
+offset_bottom = 350.36
+scale = Vector2(1.1386119, 1.1481429)
 theme_override_font_sizes/font_size = 48
 text = "5"
 
 [node name="Level6Btn" type="Button" parent="LevelSelection" unique_id=1534702723]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 912.0
-offset_top = 224.0
-offset_right = 1040.0
-offset_bottom = 360.0
+offset_left = 904.0
+offset_top = 216.0
+offset_right = 1032.0
+offset_bottom = 350.36
+scale = Vector2(1.1386033, 1.1481429)
 theme_override_font_sizes/font_size = 48
 text = "6"
 
@@ -474,6 +485,14 @@ offset_right = 1040.0
 offset_bottom = 360.0
 color = Color(0.58100957, 0.5077324, 0.21413752, 1)
 
+[node name="lvl1_locked" type="ColorRect" parent="LevelSelection" unique_id=936501747]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 223.5
+offset_right = 280.0
+offset_bottom = 359.5
+color = Color(0.21769133, 0.57197726, 0.56889683, 1)
+
 [node name="lvl2_locked" type="ColorRect" parent="LevelSelection" unique_id=500036029]
 layout_mode = 0
 offset_left = 304.0
@@ -521,4 +540,10 @@ color = Color(0.21769133, 0.57197726, 0.56889683, 1)
 [connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer" method="_on_exit_pressed"]
 [connection signal="pressed" from="OptionsPanel/CloseOptionsBtn" to="VBoxContainer" method="_on_close_options_btn_pressed"]
 [connection signal="toggled" from="OptionsPanel/Controls/CheckButton" to="OptionsPanel/Controls/CheckButton" method="_on_toggled"]
+[connection signal="pressed" from="LevelSelection/Level1Btn" to="VBoxContainer" method="_on_level_1_btn_pressed"]
+[connection signal="pressed" from="LevelSelection/Level2Btn" to="VBoxContainer" method="_on_level_2_btn_pressed"]
+[connection signal="pressed" from="LevelSelection/Level3Btn" to="VBoxContainer" method="_on_level_3_btn_pressed"]
+[connection signal="pressed" from="LevelSelection/Level4Btn" to="VBoxContainer" method="_on_level_4_btn_pressed"]
+[connection signal="pressed" from="LevelSelection/Level5Btn" to="VBoxContainer" method="_on_level_5_btn_pressed"]
+[connection signal="pressed" from="LevelSelection/Level6Btn" to="VBoxContainer" method="_on_level_6_btn_pressed"]
 [connection signal="pressed" from="LevelSelection/BackBtn" to="VBoxContainer" method="_on_LevelSelection_back_btn_pressed"]
