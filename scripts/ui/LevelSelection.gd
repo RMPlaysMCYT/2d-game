@@ -14,11 +14,12 @@ extends Button
 @onready var Level5_locked: ColorRect  = $"../LevelSelection/lvl5_locked"
 @onready var Level6_locked: ColorRect  = $"../LevelSelection/lvl6_locked"
 
+@onready var level1LockedIcon: Sprite2D = $"../LevelSelection/lockIcon"
 @onready var level2LockedIcon: Sprite2D = $"../LevelSelection/lockIcon1"
-@onready var level3LockedIcon: Sprite2D = $"../LevelSelection/lockIcon1"
-@onready var level4LockedIcon: Sprite2D = $"../LevelSelection/lockIcon1"
-@onready var level5LockedIcon: Sprite2D = $"../LevelSelection/lockIcon1"
-@onready var level6LockedIcon: Sprite2D = $"../LevelSelection/lockIcon1"
+@onready var level3LockedIcon: Sprite2D = $"../LevelSelection/lockIcon2"
+@onready var level4LockedIcon: Sprite2D = $"../LevelSelection/lockIcon3"
+@onready var level5LockedIcon: Sprite2D = $"../LevelSelection/lockIcon4"
+@onready var level6LockedIcon: Sprite2D = $"../LevelSelection/lockIcon5"
 
 
 func _ready()-> void:
@@ -26,9 +27,10 @@ func _ready()-> void:
 
 	if LevelSelectionCore.level1_completed == true:
 		Level1_locked.visible = false
-		
+		level1LockedIcon.visible = false
 	if LevelSelectionCore.level1_completed == false:
 		Level1_locked.visible = true
+		level1LockedIcon.visible = true
 
 
 

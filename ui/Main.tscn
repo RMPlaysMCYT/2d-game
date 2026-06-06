@@ -546,6 +546,12 @@ position = Vector2(368.00003, 295.50003)
 scale = Vector2(0.575, 0.575)
 texture = ExtResource("5_sx1v2")
 
+[node name="lockIcon" type="Sprite2D" parent="LevelSelection" unique_id=823962695]
+texture_filter = 1
+position = Vector2(216, 295.5)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
+
 [node name="lockIcon2" type="Sprite2D" parent="LevelSelection" unique_id=1650435586]
 texture_filter = 1
 position = Vector2(520, 295.5)

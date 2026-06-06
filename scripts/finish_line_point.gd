@@ -1,17 +1,28 @@
 extends Area2D
 
+# Set this in the Inspector for each level scene (1 through 6)
+@export var level_number: int = 1
+
 var _triggered := false
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player") or _triggered:
 		return
 	_triggered = true
+	_mark_level_complete()
 	_show_win_screen(body.Coins_Collected)
-	LevelSelectionCore.level1_completed = true
+
+func _mark_level_complete() -> void:
+	# Bug fix: was always hardcoded to level1_completed
+	match level_number:
+		1: LevelSelectionCore.level1_completed = true
+		2: LevelSelectionCore.level2_completed = true
+		3: LevelSelectionCore.level3_completed = true
+		4: LevelSelectionCore.level4_completed = true
+		5: LevelSelectionCore.level5_completed = true
+		6: LevelSelectionCore.level6_completed = true
 
 func _show_win_screen(coins: int) -> void:
-	# A dedicated CanvasLayer at layer 128 guarantees this renders
-	# above ALL game UI (HUD, camera layers, etc.)
 	var canvas := CanvasLayer.new()
 	canvas.layer = 128
 	canvas.process_mode = Node.PROCESS_MODE_ALWAYS
