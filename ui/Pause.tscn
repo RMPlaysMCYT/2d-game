@@ -76,3 +76,4 @@ text = "QUIT"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Panel/ResumeButn" to="." method="_on_resume_butn_pressed"]
+[connection signal="pressed" from="Panel/QuitBtn" to="." method="_on_quit_btn_pressed"]

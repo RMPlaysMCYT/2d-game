@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bishj3m1yv3uo" path="res://scripts/ui/options_panel.gd" id="2_t2vec"]
 [ext_resource type="PackedScene" uid="uid://bqgf1de1eaht" path="res://ui/AudioSliders.tscn" id="3_r4ypb"]
 [ext_resource type="Script" uid="uid://gnrxuckhjvq0" path="res://scripts/ui/setFullScreen.gd" id="3_t2vec"]
+[ext_resource type="Texture2D" uid="uid://ci48ikmppbgqj" path="res://assets/ui/644041-200.png" id="5_sx1v2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa6so"]
 bg_color = Color(0.7879494, 0.48278427, 0.6951937, 1)
@@ -532,6 +533,36 @@ offset_top = 224.0
 offset_right = 1040.0
 offset_bottom = 360.0
 color = Color(0.21769133, 0.57197726, 0.56889683, 1)
+
+[node name="lockIcon1" type="Sprite2D" parent="LevelSelection" unique_id=563203654]
+texture_filter = 1
+position = Vector2(368.00003, 295.50003)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
+
+[node name="lockIcon2" type="Sprite2D" parent="LevelSelection" unique_id=1650435586]
+texture_filter = 1
+position = Vector2(520, 295.5)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
+
+[node name="lockIcon3" type="Sprite2D" parent="LevelSelection" unique_id=1577154743]
+texture_filter = 1
+position = Vector2(672, 295.5)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
+
+[node name="lockIcon4" type="Sprite2D" parent="LevelSelection" unique_id=1248321218]
+texture_filter = 1
+position = Vector2(824, 295.50003)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
+
+[node name="lockIcon5" type="Sprite2D" parent="LevelSelection" unique_id=1227624898]
+texture_filter = 1
+position = Vector2(976.00006, 295.5)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("5_sx1v2")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
