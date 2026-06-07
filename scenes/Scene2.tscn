@@ -9,8 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://btsu5cf7b7su0" path="res://models/Platformer.tscn" id="7_nymxc"]
 [ext_resource type="PackedScene" uid="uid://cork7iyxctt7p" path="res://models/player.tscn" id="8_7demd"]
 [ext_resource type="Script" uid="uid://cw16c47pajghk" path="res://models/player.gd" id="9_gcpat"]
+[ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="10_8c6qw"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="10_gcpat"]
 [ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="11_5yabe"]
+[ext_resource type="Script" uid="uid://djq21rukfijwp" path="res://scripts/ui/number_bar.gd" id="11_abrd6"]
+[ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="12_wvfoh"]
+[ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="13_i5uom"]
+[ext_resource type="PackedScene" uid="uid://bw28xkvm2483o" path="res://ui/LevelComplete.tscn" id="14_ls25f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stp2n"]
 texture = ExtResource("1_dc446")
@@ -1361,6 +1366,36 @@ zoom = Vector2(2, 2)
 limit_left = -176
 limit_right = 7312
 limit_bottom = 150
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Player/Camera2D" unique_id=1433554898]
+
+[node name="Pause" parent="Player/Camera2D/CanvasLayer2" unique_id=478105143 instance=ExtResource("10_8c6qw")]
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLayerCanvas" type="CanvasLayer" parent="Player/Camera2D" unique_id=1408813855]
+
+[node name="ScoreBar" type="Label" parent="Player/Camera2D/ScoreLayerCanvas" unique_id=2021375445]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 48
+text = "Score:  0"
+script = ExtResource("11_abrd6")
+LabelName = "Score"
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="Player/Camera2D" unique_id=860875622]
+script = ExtResource("12_wvfoh")
+
+[node name="Hud" parent="Player/Camera2D/CanvasLayer3" unique_id=1685125644 instance=ExtResource("13_i5uom")]
+offset_left = 294.0
+offset_top = 16.0
+offset_right = 294.0
+offset_bottom = 16.0
+
+[node name="WinnerCanvasLayer" type="CanvasLayer" parent="Player/Camera2D" unique_id=504397037]
+
+[node name="FinishLevel" parent="Player/Camera2D/WinnerCanvasLayer" unique_id=1444370451 instance=ExtResource("14_ls25f")]
+visible = false
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("10_gcpat")]
 position = Vector2(720, 376)
