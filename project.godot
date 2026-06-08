@@ -28,6 +28,12 @@ window/stretch/aspect="expand"
 
 project/assembly_name="2D Game"
 
+[global_group]
+
+finish_line=""
+finish_line_point=""
+player=""
+
 [input]
 
 ui_accept={
