@@ -97,7 +97,6 @@ func _on_level_1_btn_pressed() -> void:
 
 func _on_level_2_btn_pressed() -> void:
 	if LevelSelectionCore.level1_completed == false:
-		null
 	if LevelSelectionCore.level1_completed == true:
 		get_tree().change_scene_to_file("res://scenes/Scene2.tscn")
 
@@ -118,13 +117,13 @@ func _on_level_4_btn_pressed() -> void:
 
 func _on_level_5_btn_pressed() -> void:
 	if LevelSelectionCore.level4_completed == false:
-		null
+		get_tree().change_scene_to_file("res://scenes/Scene5.tscn")
 	if LevelSelectionCore.level4_completed == true:
 		get_tree().change_scene_to_file("res://scenes/Scene5.tscn")
 
 
 func _on_level_6_btn_pressed() -> void:
 	if LevelSelectionCore.level5_completed == false:
-		null
+		get_tree().change_scene_to_file("res://scenes/Scene6.tscn")
 	if LevelSelectionCore.level5_completed == true:
 		get_tree().change_scene_to_file("res://scenes/Scene6.tscn")
