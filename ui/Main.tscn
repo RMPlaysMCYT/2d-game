@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bishj3m1yv3uo" path="res://scripts/ui/options_panel.gd" id="2_t2vec"]
 [ext_resource type="PackedScene" uid="uid://bqgf1de1eaht" path="res://ui/AudioSliders.tscn" id="3_r4ypb"]
 [ext_resource type="Script" uid="uid://gnrxuckhjvq0" path="res://scripts/ui/setFullScreen.gd" id="3_t2vec"]
+[ext_resource type="Script" uid="uid://0ywoq02j54ei" path="res://scripts/ui/LevelSelection.gd" id="5_enpfv"]
 [ext_resource type="Texture2D" uid="uid://ci48ikmppbgqj" path="res://assets/ui/644041-200.png" id="5_sx1v2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa6so"]
@@ -364,6 +365,7 @@ offset_right = 576.0
 offset_bottom = 323.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_enpfv")
 
 [node name="Level1Btn" type="Button" parent="LevelSelection" unique_id=167104853]
 unique_name_in_owner = true

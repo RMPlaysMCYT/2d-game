@@ -1,4 +1,4 @@
-extends Button
+extends Panel
 
 @onready var Level1: Button = $"../LevelSelection/Level1Btn"
 @onready var Level2: Button  = $"../LevelSelection/Level2Btn"
@@ -29,8 +29,8 @@ func _ready()-> void:
 		Level1_locked.visible = false
 		level1LockedIcon.visible = false
 	if LevelSelectionCore.level1_completed == false:
-		Level1_locked.visible = true
-		level1LockedIcon.visible = true
+		Level1_locked.visible = false
+		level1LockedIcon.visible = false
 
 
 
