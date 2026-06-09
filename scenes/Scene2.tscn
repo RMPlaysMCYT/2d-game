@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="12_wvfoh"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="13_i5uom"]
 [ext_resource type="PackedScene" uid="uid://bw28xkvm2483o" path="res://ui/LevelComplete.tscn" id="14_ls25f"]
+[ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="21_f6vfb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35q0r"]
 texture = ExtResource("1_ls25f")
@@ -1624,24 +1625,24 @@ position = Vector2(3464, -320)
 libraries/ = SubResource("AnimationLibrary_gcpat")
 autoplay = &"move21"
 
-[node name="Player" parent="." unique_id=686976790 instance=ExtResource("8_7demd")]
+[node name="player" parent="." unique_id=686976790 instance=ExtResource("8_7demd")]
 position = Vector2(-104, -48)
 script = ExtResource("9_gcpat")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=544012754]
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=544012754]
 zoom = Vector2(2, 2)
 limit_left = -176
 limit_right = 7312
 limit_bottom = 150
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Player/Camera2D" unique_id=1433554898]
+[node name="CanvasLayer2" type="CanvasLayer" parent="player/Camera2D" unique_id=1433554898]
 
-[node name="Pause" parent="Player/Camera2D/CanvasLayer2" unique_id=478105143 instance=ExtResource("10_8c6qw")]
+[node name="Pause" parent="player/Camera2D/CanvasLayer2" unique_id=478105143 instance=ExtResource("10_8c6qw")]
 metadata/_edit_use_anchors_ = true
 
-[node name="ScoreLayerCanvas" type="CanvasLayer" parent="Player/Camera2D" unique_id=1408813855]
+[node name="ScoreLayerCanvas" type="CanvasLayer" parent="player/Camera2D" unique_id=1408813855]
 
-[node name="ScoreBar" type="Label" parent="Player/Camera2D/ScoreLayerCanvas" unique_id=2021375445]
+[node name="ScoreBar" type="Label" parent="player/Camera2D/ScoreLayerCanvas" unique_id=2021375445]
 texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
@@ -1650,18 +1651,18 @@ text = "Score:  0"
 script = ExtResource("11_abrd6")
 LabelName = "Score"
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="Player/Camera2D" unique_id=860875622]
+[node name="CanvasLayer3" type="CanvasLayer" parent="player/Camera2D" unique_id=860875622]
 script = ExtResource("12_wvfoh")
 
-[node name="Hud" parent="Player/Camera2D/CanvasLayer3" unique_id=1685125644 instance=ExtResource("13_i5uom")]
+[node name="Hud" parent="player/Camera2D/CanvasLayer3" unique_id=1685125644 instance=ExtResource("13_i5uom")]
 offset_left = 294.0
 offset_top = 16.0
 offset_right = 294.0
 offset_bottom = 16.0
 
-[node name="WinnerCanvasLayer" type="CanvasLayer" parent="Player/Camera2D" unique_id=504397037]
+[node name="WinnerCanvasLayer" type="CanvasLayer" parent="player/Camera2D" unique_id=504397037]
 
-[node name="FinishLevel" parent="Player/Camera2D/WinnerCanvasLayer" unique_id=1444370451 instance=ExtResource("14_ls25f")]
+[node name="FinishLevel" parent="player/Camera2D/WinnerCanvasLayer" unique_id=1444370451 instance=ExtResource("14_ls25f")]
 visible = false
 
 [node name="KillZone" parent="." unique_id=1021461200 instance=ExtResource("10_gcpat")]
@@ -1674,3 +1675,227 @@ debug_color = Color(0.2596789, 0.10237778, 0.29271966, 1)
 
 [node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("11_5yabe")]
 position = Vector2(7272, -344)
+
+[node name="CoinGroups" type="Node" parent="." unique_id=1643205415]
+
+[node name="Coins" parent="CoinGroups" unique_id=1558858616 instance=ExtResource("21_f6vfb")]
+position = Vector2(139, -20)
+
+[node name="Coins2" parent="CoinGroups" unique_id=1933743045 instance=ExtResource("21_f6vfb")]
+position = Vector2(170, -20)
+
+[node name="Coins3" parent="CoinGroups" unique_id=1421938049 instance=ExtResource("21_f6vfb")]
+position = Vector2(202, -20)
+
+[node name="Coins4" parent="CoinGroups" unique_id=1570916710 instance=ExtResource("21_f6vfb")]
+position = Vector2(139, -51)
+
+[node name="Coins5" parent="CoinGroups" unique_id=1638940104 instance=ExtResource("21_f6vfb")]
+position = Vector2(170, -51)
+
+[node name="Coins6" parent="CoinGroups" unique_id=1619803305 instance=ExtResource("21_f6vfb")]
+position = Vector2(202, -51)
+
+[node name="Coins7" parent="CoinGroups" unique_id=1484300606 instance=ExtResource("21_f6vfb")]
+position = Vector2(139, -80)
+
+[node name="Coins8" parent="CoinGroups" unique_id=1468352767 instance=ExtResource("21_f6vfb")]
+position = Vector2(170, -80)
+
+[node name="Coins9" parent="CoinGroups" unique_id=123391259 instance=ExtResource("21_f6vfb")]
+position = Vector2(202, -80)
+
+[node name="Coins10" parent="CoinGroups" unique_id=1107850497 instance=ExtResource("21_f6vfb")]
+position = Vector2(139, -111)
+
+[node name="Coins11" parent="CoinGroups" unique_id=2146607021 instance=ExtResource("21_f6vfb")]
+position = Vector2(170, -111)
+
+[node name="Coins12" parent="CoinGroups" unique_id=126318923 instance=ExtResource("21_f6vfb")]
+position = Vector2(202, -111)
+
+[node name="Coins13" parent="CoinGroups" unique_id=620595950 instance=ExtResource("21_f6vfb")]
+position = Vector2(816, -13)
+
+[node name="Coins14" parent="CoinGroups" unique_id=710563184 instance=ExtResource("21_f6vfb")]
+position = Vector2(848, -13)
+
+[node name="Coins15" parent="CoinGroups" unique_id=1777780867 instance=ExtResource("21_f6vfb")]
+position = Vector2(816, -44)
+
+[node name="Coins16" parent="CoinGroups" unique_id=571512781 instance=ExtResource("21_f6vfb")]
+position = Vector2(848, -44)
+
+[node name="Coins17" parent="CoinGroups" unique_id=1760298264 instance=ExtResource("21_f6vfb")]
+position = Vector2(816, -73)
+
+[node name="Coins18" parent="CoinGroups" unique_id=529776044 instance=ExtResource("21_f6vfb")]
+position = Vector2(848, -73)
+
+[node name="Coins19" parent="CoinGroups" unique_id=882974519 instance=ExtResource("21_f6vfb")]
+position = Vector2(816, -104)
+
+[node name="Coins20" parent="CoinGroups" unique_id=1314973036 instance=ExtResource("21_f6vfb")]
+position = Vector2(848, -104)
+
+[node name="Coins21" parent="CoinGroups" unique_id=362734475 instance=ExtResource("21_f6vfb")]
+position = Vector2(888, -13)
+
+[node name="Coins22" parent="CoinGroups" unique_id=747785689 instance=ExtResource("21_f6vfb")]
+position = Vector2(920, -13)
+
+[node name="Coins23" parent="CoinGroups" unique_id=1857133327 instance=ExtResource("21_f6vfb")]
+position = Vector2(888, -44)
+
+[node name="Coins24" parent="CoinGroups" unique_id=1416815205 instance=ExtResource("21_f6vfb")]
+position = Vector2(920, -44)
+
+[node name="Coins25" parent="CoinGroups" unique_id=994830807 instance=ExtResource("21_f6vfb")]
+position = Vector2(888, -73)
+
+[node name="Coins26" parent="CoinGroups" unique_id=1708132508 instance=ExtResource("21_f6vfb")]
+position = Vector2(920, -73)
+
+[node name="Coins27" parent="CoinGroups" unique_id=78905621 instance=ExtResource("21_f6vfb")]
+position = Vector2(888, -104)
+
+[node name="Coins28" parent="CoinGroups" unique_id=1803761478 instance=ExtResource("21_f6vfb")]
+position = Vector2(920, -104)
+
+[node name="Coins29" parent="CoinGroups" unique_id=1687581593 instance=ExtResource("21_f6vfb")]
+position = Vector2(2160, -117)
+
+[node name="Coins30" parent="CoinGroups" unique_id=424635197 instance=ExtResource("21_f6vfb")]
+position = Vector2(2192, -117)
+
+[node name="Coins31" parent="CoinGroups" unique_id=1292488829 instance=ExtResource("21_f6vfb")]
+position = Vector2(2160, -148)
+
+[node name="Coins32" parent="CoinGroups" unique_id=149388942 instance=ExtResource("21_f6vfb")]
+position = Vector2(2192, -148)
+
+[node name="Coins33" parent="CoinGroups" unique_id=1711113876 instance=ExtResource("21_f6vfb")]
+position = Vector2(2160, -177)
+
+[node name="Coins34" parent="CoinGroups" unique_id=1209614038 instance=ExtResource("21_f6vfb")]
+position = Vector2(2192, -177)
+
+[node name="Coins35" parent="CoinGroups" unique_id=1787466540 instance=ExtResource("21_f6vfb")]
+position = Vector2(2160, -208)
+
+[node name="Coins36" parent="CoinGroups" unique_id=1340912116 instance=ExtResource("21_f6vfb")]
+position = Vector2(2192, -208)
+
+[node name="Coins37" parent="CoinGroups" unique_id=844945402 instance=ExtResource("21_f6vfb")]
+position = Vector2(2832, -448)
+
+[node name="Coins38" parent="CoinGroups" unique_id=1721791640 instance=ExtResource("21_f6vfb")]
+position = Vector2(2832, -488.00003)
+
+[node name="Coins39" parent="CoinGroups" unique_id=329667159 instance=ExtResource("21_f6vfb")]
+position = Vector2(2832, -528)
+
+[node name="Coins40" parent="CoinGroups" unique_id=1662592167 instance=ExtResource("21_f6vfb")]
+position = Vector2(2832, -568)
+
+[node name="Coins41" parent="CoinGroups" unique_id=1584084351 instance=ExtResource("21_f6vfb")]
+position = Vector2(2832, -608)
+
+[node name="Coins42" parent="CoinGroups" unique_id=837918582 instance=ExtResource("21_f6vfb")]
+position = Vector2(3008, -344)
+
+[node name="Coins43" parent="CoinGroups" unique_id=1466264049 instance=ExtResource("21_f6vfb")]
+position = Vector2(3008, -384)
+
+[node name="Coins44" parent="CoinGroups" unique_id=1160652035 instance=ExtResource("21_f6vfb")]
+position = Vector2(3696, -344)
+
+[node name="Coins45" parent="CoinGroups" unique_id=1418650651 instance=ExtResource("21_f6vfb")]
+position = Vector2(3696, -384)
+
+[node name="Coins46" parent="CoinGroups" unique_id=810788500 instance=ExtResource("21_f6vfb")]
+position = Vector2(3696, -424)
+
+[node name="Coins47" parent="CoinGroups" unique_id=1698635097 instance=ExtResource("21_f6vfb")]
+position = Vector2(4840, -752)
+
+[node name="Coins48" parent="CoinGroups" unique_id=53679095 instance=ExtResource("21_f6vfb")]
+position = Vector2(4872, -752)
+
+[node name="Coins49" parent="CoinGroups" unique_id=2140437226 instance=ExtResource("21_f6vfb")]
+position = Vector2(4904, -752)
+
+[node name="Coins50" parent="CoinGroups" unique_id=62798664 instance=ExtResource("21_f6vfb")]
+position = Vector2(4936, -752)
+
+[node name="Coins51" parent="CoinGroups" unique_id=764409615 instance=ExtResource("21_f6vfb")]
+position = Vector2(4968, -752)
+
+[node name="Coins52" parent="CoinGroups" unique_id=2083937603 instance=ExtResource("21_f6vfb")]
+position = Vector2(5000, -752)
+
+[node name="Coins53" parent="CoinGroups" unique_id=723175006 instance=ExtResource("21_f6vfb")]
+position = Vector2(5032, -752)
+
+[node name="Coins54" parent="CoinGroups" unique_id=486191944 instance=ExtResource("21_f6vfb")]
+position = Vector2(5032, -784)
+
+[node name="Coins55" parent="CoinGroups" unique_id=301701205 instance=ExtResource("21_f6vfb")]
+position = Vector2(5000, -784)
+
+[node name="Coins56" parent="CoinGroups" unique_id=869040397 instance=ExtResource("21_f6vfb")]
+position = Vector2(4968, -784)
+
+[node name="Coins57" parent="CoinGroups" unique_id=1347255948 instance=ExtResource("21_f6vfb")]
+position = Vector2(4936, -784)
+
+[node name="Coins58" parent="CoinGroups" unique_id=941118370 instance=ExtResource("21_f6vfb")]
+position = Vector2(4904, -784)
+
+[node name="Coins59" parent="CoinGroups" unique_id=394433005 instance=ExtResource("21_f6vfb")]
+position = Vector2(4872, -784)
+
+[node name="Coins60" parent="CoinGroups" unique_id=1914405168 instance=ExtResource("21_f6vfb")]
+position = Vector2(4840, -784)
+
+[node name="Coins61" parent="CoinGroups" unique_id=1176976922 instance=ExtResource("21_f6vfb")]
+position = Vector2(5552, -352)
+
+[node name="Coins62" parent="CoinGroups" unique_id=898346334 instance=ExtResource("21_f6vfb")]
+position = Vector2(5584, -352)
+
+[node name="Coins63" parent="CoinGroups" unique_id=1085098192 instance=ExtResource("21_f6vfb")]
+position = Vector2(5616, -352)
+
+[node name="Coins64" parent="CoinGroups" unique_id=1787891913 instance=ExtResource("21_f6vfb")]
+position = Vector2(5648, -352)
+
+[node name="Coins65" parent="CoinGroups" unique_id=867480012 instance=ExtResource("21_f6vfb")]
+position = Vector2(5680, -352)
+
+[node name="Coins66" parent="CoinGroups" unique_id=1372624904 instance=ExtResource("21_f6vfb")]
+position = Vector2(5712, -352)
+
+[node name="Coins67" parent="CoinGroups" unique_id=294882486 instance=ExtResource("21_f6vfb")]
+position = Vector2(5744, -352)
+
+[node name="Coins68" parent="CoinGroups" unique_id=199698799 instance=ExtResource("21_f6vfb")]
+position = Vector2(5744, -384)
+
+[node name="Coins69" parent="CoinGroups" unique_id=258266051 instance=ExtResource("21_f6vfb")]
+position = Vector2(5712, -384)
+
+[node name="Coins70" parent="CoinGroups" unique_id=1220456729 instance=ExtResource("21_f6vfb")]
+position = Vector2(5680, -384)
+
+[node name="Coins71" parent="CoinGroups" unique_id=315901851 instance=ExtResource("21_f6vfb")]
+position = Vector2(5648, -384)
+
+[node name="Coins72" parent="CoinGroups" unique_id=278567980 instance=ExtResource("21_f6vfb")]
+position = Vector2(5616, -384)
+
+[node name="Coins73" parent="CoinGroups" unique_id=1951804113 instance=ExtResource("21_f6vfb")]
+position = Vector2(5584, -384)
+
+[node name="Coins74" parent="CoinGroups" unique_id=1302813699 instance=ExtResource("21_f6vfb")]
+position = Vector2(5552, -384)
