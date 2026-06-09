@@ -6,11 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://d135gulto6fp3" path="res://assets/Tiles/dungeon_.png" id="4_2wgei"]
 [ext_resource type="Texture2D" uid="uid://dikqmt7tenmwu" path="res://assets/Tiles/spring_.png" id="5_wf2ir"]
 [ext_resource type="Texture2D" uid="uid://cpwklsx7swvb3" path="res://assets/Tiles/winter_.png" id="6_ns16f"]
+[ext_resource type="Texture2D" uid="uid://caay1qlp83b3u" path="res://assets/Environment/bush.png" id="7_etect"]
 [ext_resource type="PackedScene" uid="uid://cork7iyxctt7p" path="res://models/player.tscn" id="7_in3i7"]
+[ext_resource type="Texture2D" uid="uid://obo78hsgh3bt" path="res://assets/Environment/grass tileset ver.2.png" id="8_fxmf5"]
 [ext_resource type="Script" uid="uid://cw16c47pajghk" path="res://models/player.gd" id="8_s0edu"]
 [ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="8_v61uw"]
+[ext_resource type="Texture2D" uid="uid://dukutxln2wgwo" path="res://assets/Environment/grass.png" id="9_by6se"]
 [ext_resource type="Script" uid="uid://djq21rukfijwp" path="res://scripts/ui/number_bar.gd" id="9_s0edu"]
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="10_l8a31"]
+[ext_resource type="Texture2D" uid="uid://lqqasvsvk8dr" path="res://assets/Environment/tree.png" id="10_v7lcu"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="11_cai2x"]
 [ext_resource type="PackedScene" uid="uid://bw28xkvm2483o" path="res://ui/LevelComplete.tscn" id="12_6wc1c"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="14_l8a31"]
@@ -1863,6 +1867,266 @@ sources/4 = SubResource("TileSetAtlasSource_6wc1c")
 sources/5 = SubResource("TileSetAtlasSource_l4736")
 sources/6 = SubResource("TileSetAtlasSource_ebrxl")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_soty2"]
+texture = ExtResource("7_etect")
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jyol"]
+texture = ExtResource("8_fxmf5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6dxd"]
+texture = ExtResource("9_by6se")
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q71du"]
+texture = ExtResource("10_v7lcu")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1b050"]
+sources/0 = SubResource("TileSetAtlasSource_soty2")
+sources/1 = SubResource("TileSetAtlasSource_6jyol")
+sources/2 = SubResource("TileSetAtlasSource_y6dxd")
+sources/3 = SubResource("TileSetAtlasSource_q71du")
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cai2x"]
 
 [sub_resource type="Animation" id="Animation_6wc1c"]
@@ -1909,6 +2173,9 @@ _data = {
 visible = false
 texture_filter = 1
 tile_set = SubResource("TileSet_hny1w")
+
+[node name="Bckground0TEMP" type="TileMapLayer" parent="." unique_id=1960784694]
+tile_set = SubResource("TileSet_1b050")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=694039322]
 texture_filter = 1
