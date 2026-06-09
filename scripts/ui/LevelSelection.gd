@@ -25,52 +25,52 @@ extends Panel
 func _ready()-> void:
 	Level1.grab_focus()
 
-	if LevelSelectionCore.level1_completed == true:
-		Level1_locked.visible = false
-		level1LockedIcon.visible = false
-	if LevelSelectionCore.level1_completed == false:
-		Level1_locked.visible = false
-		level1LockedIcon.visible = false
-
-
-
-	if LevelSelectionCore.level2_completed == true:
-		Level2_locked.visible = false
-		level2LockedIcon.visible = false
-		
-	if LevelSelectionCore.level2_completed == false:
-		Level2_locked.visible = true
-		level2LockedIcon.visible = true
-
-
-	if LevelSelectionCore.level3_completed == true:
-		Level3_locked.visible = false
-		level3LockedIcon.visible = false
-		
-	if LevelSelectionCore.level3_completed == false:
-		Level3_locked.visible = true
-		level3LockedIcon.visible = true
-
-	if LevelSelectionCore.level4_completed == true:
-		Level4_locked.visible = false
-		level4LockedIcon.visible = false
-		
-	if LevelSelectionCore.level4_completed == false:
-		Level4_locked.visible = true
-		level4LockedIcon.visible = true
-
-	if LevelSelectionCore.level5_completed == true:
-		Level5_locked.visible = false
-		level5LockedIcon.visible = false
-		
-	if LevelSelectionCore.level5_completed == false:
-		Level5_locked.visible = true
-		level5LockedIcon.visible = true
-
-	if LevelSelectionCore.level6_completed == true:
-		Level6_locked.visible = false
-		level6LockedIcon.visible = false
-		
-	if LevelSelectionCore.level6_completed == false:
-		Level6_locked.visible = true
-		level6LockedIcon.visible = true
+	#if LevelSelectionCore.level1_completed == true:
+		#Level1_locked.visible = false
+		#level1LockedIcon.visible = false
+	#if LevelSelectionCore.level1_completed == false:
+		#Level1_locked.visible = false
+		#level1LockedIcon.visible = false
+#
+#
+#
+	#if LevelSelectionCore.level2_completed == true:
+		#Level2_locked.visible = false
+		#level2LockedIcon.visible = false
+		#
+	#if LevelSelectionCore.level2_completed == false:
+		#Level2_locked.visible = true
+		#level2LockedIcon.visible = true
+#
+#
+	#if LevelSelectionCore.level3_completed == true:
+		#Level3_locked.visible = false
+		#level3LockedIcon.visible = false
+		#
+	#if LevelSelectionCore.level3_completed == false:
+		#Level3_locked.visible = true
+		#level3LockedIcon.visible = true
+#
+	#if LevelSelectionCore.level4_completed == true:
+		#Level4_locked.visible = false
+		#level4LockedIcon.visible = false
+		#
+	#if LevelSelectionCore.level4_completed == false:
+		#Level4_locked.visible = true
+		#level4LockedIcon.visible = true
+#
+	#if LevelSelectionCore.level5_completed == true:
+		#Level5_locked.visible = false
+		#level5LockedIcon.visible = false
+		#
+	#if LevelSelectionCore.level5_completed == false:
+		#Level5_locked.visible = true
+		#level5LockedIcon.visible = true
+#
+	#if LevelSelectionCore.level6_completed == true:
+		#Level6_locked.visible = false
+		#level6LockedIcon.visible = false
+		#
+	#if LevelSelectionCore.level6_completed == false:
+		#Level6_locked.visible = true
+		#level6LockedIcon.visible = true
