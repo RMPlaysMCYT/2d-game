@@ -13,7 +13,7 @@ const LEVEL_SCENES = {
 
 const SAVE_FILE = "user://game_progress.save"
 
-var completed_levels: Array = [false, false, false, false, false, false]
+var completed_levels: Array = [true, true, true, true, true, true]
 
 func _ready():
 	load_game()
@@ -62,7 +62,7 @@ func load_game():
 		print("🆕 No save file found, starting fresh!")
 
 func reset_progress():
-	completed_levels = [false, false, false, false, false, false]
+	completed_levels = [true, true, true, true, true, true]
 	save_game()
 	print("🔄 Progress reset!")
 	

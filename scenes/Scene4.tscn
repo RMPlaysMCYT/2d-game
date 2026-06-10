@@ -2949,6 +2949,7 @@ position = Vector2(9910, -863)
 stream = ExtResource("24_fi26c")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="Mob/BombO_Template" to="Mob/BombO" method="_on_bomb_o_template_body_entered"]
 [connection signal="body_entered" from="Mob/BombO_Template2" to="Mob/BombO" method="_on_bomb_o_template_body_entered"]

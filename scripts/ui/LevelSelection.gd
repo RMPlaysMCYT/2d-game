@@ -21,9 +21,9 @@ extends Panel
 @onready var level5LockedIcon: Sprite2D = $"../LevelSelection/lockIcon4"
 @onready var level6LockedIcon: Sprite2D = $"../LevelSelection/lockIcon5"
 
-
-func _ready()-> void:
-	Level1.grab_focus()
+#
+#func _ready()-> void:
+	#Level1.grab_focus()
 
 	#if LevelSelectionCore.level1_completed == true:
 		#Level1_locked.visible = false

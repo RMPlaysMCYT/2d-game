@@ -3995,3 +3995,4 @@ debug_color = Color(0, 0.6, 0.12156863, 1)
 stream = ExtResource("22_qgeb6")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"

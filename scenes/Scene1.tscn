@@ -1831,6 +1831,7 @@ shape = SubResource("CircleShape2D_5eoqb")
 stream = ExtResource("25_2qo02")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="Enemy/BombO" to="Enemy/BombO" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemy/BombO2" to="Enemy/BombO" method="_on_body_entered"]

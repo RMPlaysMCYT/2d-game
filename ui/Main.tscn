@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://gnrxuckhjvq0" path="res://scripts/ui/setFullScreen.gd" id="3_t2vec"]
 [ext_resource type="Script" uid="uid://0ywoq02j54ei" path="res://scripts/ui/LevelSelection.gd" id="5_enpfv"]
 [ext_resource type="Texture2D" uid="uid://ci48ikmppbgqj" path="res://assets/ui/644041-200.png" id="5_sx1v2"]
+[ext_resource type="AudioStream" uid="uid://dnu6rfpnqdx3u" path="res://audio/streams/music/nobonoko - Strawberry Cake.mp3" id="7_d1rkh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa6so"]
 bg_color = Color(0.7879494, 0.48278427, 0.6951937, 1)
@@ -89,9 +90,40 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2vec"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3hyh"]
+bg_color = Color(0.40155444, 0.6182917, 0.84059495, 1)
+skew = Vector2(0.445, 0)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sx1v2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asnk4"]
+skew = Vector2(0.435, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82cwr"]
+bg_color = Color(0.42698026, 0.6481872, 0.63557196, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_525rr"]
+bg_color = Color(0.42745098, 0.64705884, 0.63529414, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s82co"]
+bg_color = Color(0.42745098, 0.64705884, 0.63529414, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_km11n"]
+bg_color = Color(0.42745098, 0.64705884, 0.63529414, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Control" type="Control" unique_id=529048760]
 layout_mode = 3
@@ -108,16 +140,16 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -473.0
-offset_top = -102.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = -489.0
+offset_top = -120.0
+offset_right = -17.0
+offset_bottom = -19.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "VERSION 1.0.0 - G5 Gaming and BlueHeart Interactive Studios
 Developed by Ronnel Mitra and Sahania Samera Naga
 Assets by Madilyn Rodriguez and Sharmaine Malquisto
-Audio and SFX By Mary Joy"
+Audio and SFX By Mary Joy Urboda"
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="." unique_id=876565388]
@@ -195,9 +227,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -576.0
+offset_left = -620.0
 offset_top = -324.0
-offset_right = 576.0
+offset_right = 636.0
 offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -205,159 +237,182 @@ script = ExtResource("2_t2vec")
 
 [node name="Label5" type="Label" parent="OptionsPanel" unique_id=306874007]
 layout_mode = 1
-offset_left = 207.0
-offset_top = 88.0
-offset_right = 812.0
-offset_bottom = 176.0
+offset_left = 152.0
+offset_top = 29.0
+offset_right = 757.0
+offset_bottom = 117.0
 theme_override_font_sizes/font_size = 64
 text = "OPTIONS"
 
 [node name="CloseOptionsBtn" type="Button" parent="OptionsPanel" unique_id=84956293]
 layout_mode = 0
-offset_left = 791.5
-offset_top = 105.0
-offset_right = 911.5
-offset_bottom = 153.0
+offset_left = 892.0
+offset_top = 53.0
+offset_right = 1012.0
+offset_bottom = 101.0
 theme_override_font_sizes/font_size = 24
 text = "CLOSE
 "
 
 [node name="AudioPanel" type="Panel" parent="OptionsPanel" unique_id=1522781116]
 layout_mode = 0
-offset_left = 207.0
-offset_top = 176.0
-offset_right = 892.0
-offset_bottom = 411.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_t2vec")
+offset_top = 135.0
+offset_right = 1256.0
+offset_bottom = 502.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3hyh")
 
 [node name="Label" type="Label" parent="OptionsPanel/AudioPanel" unique_id=1634395130]
 layout_mode = 0
-offset_left = 21.5
-offset_top = 67.0
-offset_right = 111.5
-offset_bottom = 112.0
+offset_left = 159.0
+offset_top = 108.0
+offset_right = 249.0
+offset_bottom = 153.0
 theme_override_font_sizes/font_size = 32
 text = "Audio"
 
 [node name="Label2" type="Label" parent="OptionsPanel/AudioPanel" unique_id=18425401]
 layout_mode = 0
-offset_left = 21.5
-offset_top = 143.0
-offset_right = 231.5
-offset_bottom = 188.0
+offset_left = 159.0
+offset_top = 184.0
+offset_right = 369.0
+offset_bottom = 229.0
 theme_override_font_sizes/font_size = 32
 text = "Sound Effects"
 
 [node name="SFXSlider" parent="OptionsPanel/AudioPanel" unique_id=1226567259 instance=ExtResource("3_r4ypb")]
 layout_mode = 0
-offset_left = 21.5
-offset_top = 203.0
-offset_right = 646.5
-offset_bottom = 219.0
+offset_left = 159.0
+offset_top = 244.0
+offset_right = 784.0
+offset_bottom = 260.0
 bus_name = "SoundEffects"
 
 [node name="MusicSlider" parent="OptionsPanel/AudioPanel" unique_id=2440162 instance=ExtResource("3_r4ypb")]
 layout_mode = 0
-offset_left = 21.5
-offset_top = 126.0
-offset_right = 646.5
-offset_bottom = 142.0
+offset_left = 159.0
+offset_top = 167.0
+offset_right = 784.0
+offset_bottom = 183.0
 bus_name = "Music"
 
 [node name="Label3" type="Label" parent="OptionsPanel/AudioPanel" unique_id=1653266613]
 layout_mode = 0
-offset_left = 21.5
-offset_top = -7.0
-offset_right = 130.5
-offset_bottom = 38.0
+offset_left = 159.0
+offset_top = 34.0
+offset_right = 268.0
+offset_bottom = 79.0
 theme_override_font_sizes/font_size = 32
 text = "Master"
 
 [node name="MusicSlider2" parent="OptionsPanel/AudioPanel" unique_id=1074172773 instance=ExtResource("3_r4ypb")]
 layout_mode = 0
-offset_left = 21.5
-offset_top = 51.0
-offset_right = 646.5
-offset_bottom = 67.0
+offset_left = 159.0
+offset_top = 92.0
+offset_right = 784.0
+offset_bottom = 108.0
 bus_name = "Master"
 
 [node name="Controls" type="Panel" parent="OptionsPanel" unique_id=775930897]
 layout_mode = 0
-offset_left = 207.0
-offset_top = 176.0
-offset_right = 910.5
-offset_bottom = 439.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_sx1v2")
+offset_top = 127.0
+offset_right = 1256.0
+offset_bottom = 528.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_asnk4")
 
 [node name="Label4" type="Label" parent="OptionsPanel/Controls" unique_id=1486777305]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 26.0
-offset_right = 241.0
-offset_bottom = 71.0
+offset_left = 152.0
+offset_top = 57.0
+offset_right = 362.0
+offset_bottom = 102.0
 theme_override_font_sizes/font_size = 32
 text = "Control Type"
 
 [node name="Button" type="Button" parent="OptionsPanel/Controls" unique_id=980026100]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 86.0
-offset_right = 188.0
-offset_bottom = 140.0
+offset_left = 152.0
+offset_top = 106.0
+offset_right = 285.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.58972615, 0.598866, 1, 1)
 text = "KEYBOARD AND
 MOUSE"
 
 [node name="Button2" type="Button" parent="OptionsPanel/Controls" unique_id=653060145]
 layout_mode = 0
-offset_left = 207.0
-offset_top = 86.0
-offset_right = 340.0
-offset_bottom = 142.0
+offset_left = 152.0
+offset_top = 173.0
+offset_right = 285.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.59980905, 0.25399002, 0.52618, 1)
 text = "GAMEPAD"
 
 [node name="Button3" type="Button" parent="OptionsPanel/Controls" unique_id=803113352]
 layout_mode = 0
-offset_left = 359.0
-offset_top = 86.0
-offset_right = 492.0
-offset_bottom = 142.0
+offset_left = 312.0
+offset_top = 106.0
+offset_right = 445.0
+offset_bottom = 162.0
+theme_override_colors/font_color = Color(0.53766906, 1, 0.5322468, 1)
 text = "TOUCH"
 
 [node name="Button4" type="Button" parent="OptionsPanel/Controls" unique_id=856350853]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 86.0
-offset_right = 644.0
-offset_bottom = 142.0
+offset_left = 312.0
+offset_top = 173.0
+offset_right = 445.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.42528525, 0.16704893, 0.6227155, 1)
 text = "AUTO-SWITCH"
 
 [node name="CheckButton" type="CheckButton" parent="OptionsPanel/Controls" unique_id=1709704738]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 157.0
-offset_right = 277.0
-offset_bottom = 199.0
+offset_left = 152.0
+offset_top = 248.0
+offset_right = 445.0
+offset_bottom = 300.0
 theme_override_font_sizes/font_size = 24
 text = " SET FULLSCREEN"
 script = ExtResource("3_t2vec")
 
+[node name="Label" type="Label" parent="OptionsPanel/Controls" unique_id=1057739715]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 116.0
+offset_right = 1124.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 24
+text = "How to Play:
+WASD/D-PAD/Dpad-Touch - Move
+Spacebar/X/Btn1 - Jump
+ESC/SELECT/BTN2 - Pause"
+
 [node name="AudioBtn" type="Button" parent="OptionsPanel" unique_id=1136237575]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 435.0
-offset_right = 695.5
-offset_bottom = 490.0
+offset_left = 152.0
+offset_top = 545.0
+offset_right = 377.5
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_82cwr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_525rr")
 text = "AUDIO"
 
 [node name="ControlsBtn" type="Button" parent="OptionsPanel" unique_id=714349744]
 layout_mode = 0
-offset_left = 217.0
-offset_top = 435.0
-offset_right = 442.5
-offset_bottom = 490.0
+offset_left = 395.0
+offset_top = 545.0
+offset_right = 620.5
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_s82co")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_km11n")
 text = "CONTROLS"
 
 [node name="LevelSelection" type="Panel" parent="." unique_id=2051393607]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -529,6 +584,13 @@ texture_filter = 1
 position = Vector2(368.00003, 295.50003)
 scale = Vector2(0.575, 0.575)
 texture = ExtResource("5_sx1v2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1788560428]
+stream = ExtResource("7_d1rkh")
+autoplay = true
+bus = &"Music"
+playback_type = 1
+parameters/looping = false
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
