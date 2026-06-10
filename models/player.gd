@@ -8,6 +8,9 @@ var is_player_dead: bool = false
 var JumpCount = 0
 var Coins_Collected: int = 0
 
+
+@onready var sfx_jump: AudioStreamPlayer = $SFX_Jump
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 var is_attacking: bool = false
@@ -29,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept") and JumpCount < MAXJUMPS :
 			velocity.y = JUMP_VELOCITY
 			JumpCount += 1
+			sfx_jump.play()
 
 		var direction := Input.get_axis("ui_left", "ui_right")
 		if direction:

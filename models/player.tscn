@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://clv2855rsvh6n" path="res://assets/Character/Jake/male_hero-combo_1_end.png" id="4_7urtu"]
 [ext_resource type="Texture2D" uid="uid://c2hgbyk8q1ibs" path="res://assets/Character/Jake/male_hero-jump.png" id="5_3xdng"]
+[ext_resource type="AudioStream" uid="uid://ukge6jhj51l" path="res://audio/sfx/JDSherbert - Pixel Game Essentials SFX Pack - Jump 1.wav" id="5_vcj2a"]
 [ext_resource type="Texture2D" uid="uid://bw2k1lq0phi0d" path="res://assets/Character/Jake/male_hero-idle.png" id="7_yr1bw"]
 [ext_resource type="Texture2D" uid="uid://bmmj33sxs4yfn" path="res://assets/Character/Jake/male_hero-run.png" id="8_7urtu"]
 
@@ -377,3 +378,7 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=291783554]
 position = Vector2(-0.5, 36)
 shape = SubResource("RectangleShape2D_uc0rf")
+
+[node name="SFX_Jump" type="AudioStreamPlayer" parent="." unique_id=1452956084]
+stream = ExtResource("5_vcj2a")
+volume_db = -16.0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chem6rg7abxd4"
+path="res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Box Break 1.wav-5644ed053c5a6dd6e2439e942c418f84.sample"
+
+[deps]
+
+source_file="res://audio/sfx/JDSherbert - Pixel Game Essentials SFX Pack - Box Break 1.wav"
+dest_files=["res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Box Break 1.wav-5644ed053c5a6dd6e2439e942c418f84.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
