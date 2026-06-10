@@ -108,11 +108,17 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -472.0
-offset_top = -23.0
+offset_left = -473.0
+offset_top = -102.0
+offset_right = -1.0
+offset_bottom = -1.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "VERSION 1.0.0 - G5 Gaming and BlueHeart Interactive Studios"
+text = "VERSION 1.0.0 - G5 Gaming and BlueHeart Interactive Studios
+Developed by Ronnel Mitra and Sahania Samera Naga
+Assets by Madilyn Rodriguez and Sharmaine Malquisto
+Audio and SFX By Mary Joy"
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="." unique_id=876565388]
 layout_mode = 1
@@ -183,7 +189,6 @@ autoplay = true
 bus = &"Music"
 
 [node name="OptionsPanel" type="Panel" parent="." unique_id=766041407]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
