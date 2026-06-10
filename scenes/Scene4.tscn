@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="16_7pyxl"]
 [ext_resource type="Texture2D" uid="uid://cutmigxqabmwt" path="res://assets/swap/sprites/world_tileset.png" id="17_qd8oj"]
 [ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="23_1m7nq"]
+[ext_resource type="AudioStream" uid="uid://0los1p7nl6xf" path="res://audio/streams/music/Dj Khaled ft. Rihanna & Bryson Tiller - Wild Thoughts (HQ) Instrumental.mp3" id="24_fi26c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24hfh"]
 texture = ExtResource("17_qd8oj")
@@ -2943,6 +2944,11 @@ tile_set = SubResource("TileSet_fi26c")
 
 [node name="FinishLinePoint" parent="." unique_id=789232015 instance=ExtResource("23_1m7nq")]
 position = Vector2(9910, -863)
+
+[node name="MusicBG" type="AudioStreamPlayer" parent="." unique_id=203848914]
+stream = ExtResource("24_fi26c")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="Mob/BombO_Template" to="Mob/BombO" method="_on_bomb_o_template_body_entered"]
 [connection signal="body_entered" from="Mob/BombO_Template2" to="Mob/BombO" method="_on_bomb_o_template_body_entered"]

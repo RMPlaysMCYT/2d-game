@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://btsu5cf7b7su0" path="res://models/Platformer.tscn" id="15_cai2x"]
 [ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="16_6wc1c"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="21_fxmf5"]
+[ext_resource type="AudioStream" uid="uid://0los1p7nl6xf" path="res://audio/streams/music/Dj Khaled ft. Rihanna & Bryson Tiller - Wild Thoughts (HQ) Instrumental.mp3" id="22_by6se"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v61uw"]
 texture = ExtResource("1_vaxsy")
@@ -2452,3 +2453,8 @@ position = Vector2(6384, -1136)
 
 [node name="Coins60" parent="." unique_id=1267667781 instance=ExtResource("21_fxmf5")]
 position = Vector2(6415, -1136)
+
+[node name="MusicBG" type="AudioStreamPlayer" parent="." unique_id=909500047]
+stream = ExtResource("22_by6se")
+volume_db = -10.0
+autoplay = true

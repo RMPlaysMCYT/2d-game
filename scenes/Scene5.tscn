@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://si6rx47ubcl3" path="res://models/FinishLinePoint.tscn" id="18_qhdxq"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="20_ng8tm"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="21_g0tf7"]
+[ext_resource type="AudioStream" uid="uid://0los1p7nl6xf" path="res://audio/streams/music/Dj Khaled ft. Rihanna & Bryson Tiller - Wild Thoughts (HQ) Instrumental.mp3" id="22_qgeb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt8h0"]
 texture = ExtResource("1_t5e1q")
@@ -3989,3 +3990,8 @@ position = Vector2(1797, 571)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1557928014]
 shape = SubResource("WorldBoundaryShape2D_qgeb6")
 debug_color = Color(0, 0.6, 0.12156863, 1)
+
+[node name="MusicBG" type="AudioStreamPlayer" parent="." unique_id=705366963]
+stream = ExtResource("22_qgeb6")
+volume_db = -10.0
+autoplay = true

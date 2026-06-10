@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="13_i5uom"]
 [ext_resource type="PackedScene" uid="uid://bw28xkvm2483o" path="res://ui/LevelComplete.tscn" id="14_ls25f"]
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="21_f6vfb"]
+[ext_resource type="AudioStream" uid="uid://df7yrwx16fm6p" path="res://audio/streams/music/Stevie Wonder - I Just Called To Say I Love You Instrumental.mp3" id="22_rs7xp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35q0r"]
 texture = ExtResource("1_ls25f")
@@ -1899,3 +1900,8 @@ position = Vector2(5584, -384)
 
 [node name="Coins74" parent="CoinGroups" unique_id=1302813699 instance=ExtResource("21_f6vfb")]
 position = Vector2(5552, -384)
+
+[node name="MusicBG" type="AudioStreamPlayer" parent="." unique_id=421252552]
+stream = ExtResource("22_rs7xp")
+volume_db = -10.0
+autoplay = true
