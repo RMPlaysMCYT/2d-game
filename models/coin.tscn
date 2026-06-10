@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cplhgl34pp1vr" path="res://assets/Items/MonedaD.png" id="1_8wasy"]
 [ext_resource type="Script" uid="uid://cldoddhmxkgki" path="res://models/coin.gd" id="1_bg2rp"]
+[ext_resource type="AudioStream" uid="uid://cagk6rmn54ssv" path="res://audio/sfx/JDSherbert - Pixel Game Essentials SFX Pack - Coin 1.wav" id="3_ci0ay"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bg2rp"]
 
@@ -62,5 +63,10 @@ sprite_frames = SubResource("SpriteFrames_d6pru")
 autoplay = "default"
 frame = 3
 frame_progress = 0.09005639
+
+[node name="CoinCollect" type="AudioStreamPlayer" parent="." unique_id=2025064154]
+stream = ExtResource("3_ci0ay")
+volume_db = -16.0
+bus = &"SoundEffects"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

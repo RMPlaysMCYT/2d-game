@@ -8,9 +8,9 @@ var is_player_dead: bool = false
 var JumpCount = 0
 var Coins_Collected: int = 0
 
-
+@onready var sfx_die: AudioStreamPlayer = $SFX_Die
 @onready var sfx_jump: AudioStreamPlayer = $SFX_Jump
-
+@onready var ScoreCollected = $Camera2D/ScoreLayerCanvas/ScoreBar
 @onready var animated_sprite = $AnimatedSprite2D
 
 var is_attacking: bool = false
@@ -64,13 +64,13 @@ func update_animation(direction):
 		else:
 			animated_sprite.play("idle")
 
-@onready var ScoreCollected = $Camera2D/ScoreLayerCanvas/ScoreBar
-
 func coinCollected(amount: int = 1)-> void:
 	Coins_Collected += amount
 	ScoreCollected.set_value(Coins_Collected)
 	
+
 func HarmedByAMob() -> void:
 	is_player_dead = true
 	is_attacking = false
 	animated_sprite.play("dead")
+	sfx_die.play()
