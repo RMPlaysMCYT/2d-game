@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dwdon2c5lcohc" path="res://models/coin.tscn" id="19_dbw3f"]
 [ext_resource type="PackedScene" uid="uid://cvfsdgau1gwal" path="res://models/kill_zone.tscn" id="20_5eoqb"]
 [ext_resource type="PackedScene" uid="uid://bowmqdans50a3" path="res://models/BombO.tscn" id="20_pf7t0"]
+[ext_resource type="AudioStream" uid="uid://0los1p7nl6xf" path="res://audio/streams/music/Dj Khaled ft. Rihanna & Bryson Tiller - Wild Thoughts (HQ) Instrumental.mp3" id="25_2qo02"]
 [ext_resource type="PackedScene" uid="uid://dc2m5xtluyuf5" path="res://ui/Pause.tscn" id="61_nyebm"]
 [ext_resource type="PackedScene" uid="uid://2p2ljxyrbeyr" path="res://ui/Hud.tscn" id="62_361ml"]
 [ext_resource type="Script" uid="uid://b3cnjds04juip" path="res://scripts/ui/mobile_layout_scn.gd" id="62_mf60r"]
@@ -1825,6 +1826,11 @@ position = Vector2(556, -17)
 shape = SubResource("CircleShape2D_5eoqb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/BombO2" unique_id=805520033]
+
+[node name="MusicBG" type="AudioStreamPlayer" parent="." unique_id=1105653722]
+stream = ExtResource("25_2qo02")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="Enemy/BombO" to="Enemy/BombO" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemy/BombO2" to="Enemy/BombO" method="_on_body_entered"]

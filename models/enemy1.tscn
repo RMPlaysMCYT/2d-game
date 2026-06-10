@@ -15,6 +15,7 @@ scale = Vector2(0.9600004, 0.96000034)
 texture = ExtResource("1_p7yhp")
 
 [node name="Timer2" type="Timer" parent="." unique_id=847825505]
+wait_time = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

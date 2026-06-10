@@ -70,6 +70,7 @@ sprite_frames = SubResource("SpriteFrames_xee7f")
 animation = &"idle"
 
 [node name="Timer2" type="Timer" parent="." unique_id=1577982550]
+wait_time = 3.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=622850212]
 bus = &"SoundEffects"

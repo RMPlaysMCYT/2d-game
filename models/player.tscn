@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2hgbyk8q1ibs" path="res://assets/Character/Jake/male_hero-jump.png" id="5_3xdng"]
 [ext_resource type="AudioStream" uid="uid://ukge6jhj51l" path="res://audio/sfx/JDSherbert - Pixel Game Essentials SFX Pack - Jump 1.wav" id="5_vcj2a"]
 [ext_resource type="AudioStream" uid="uid://dti48gp3w2qvq" path="res://audio/sfx/JDSherbert - Pixel Game Essentials SFX Pack - Die 1.wav" id="6_p57dt"]
+[ext_resource type="AudioStream" uid="uid://dw8gx424cxyj6" path="res://audio/sfx/JDSherbert - Footstep Foley SFX Pack - Footstep (Grass - 1).wav" id="7_48nih"]
 [ext_resource type="Texture2D" uid="uid://bw2k1lq0phi0d" path="res://assets/Character/Jake/male_hero-idle.png" id="7_yr1bw"]
 [ext_resource type="Texture2D" uid="uid://bmmj33sxs4yfn" path="res://assets/Character/Jake/male_hero-run.png" id="8_7urtu"]
 
@@ -387,4 +388,9 @@ bus = &"SoundEffects"
 
 [node name="SFX_Die" type="AudioStreamPlayer" parent="." unique_id=403019932]
 stream = ExtResource("6_p57dt")
+bus = &"SoundEffects"
+
+[node name="SFX_Run" type="AudioStreamPlayer" parent="." unique_id=504542999]
+stream = ExtResource("7_48nih")
+volume_db = -16.0
 bus = &"SoundEffects"

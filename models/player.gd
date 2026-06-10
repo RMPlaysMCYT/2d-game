@@ -12,6 +12,7 @@ var Coins_Collected: int = 0
 @onready var sfx_jump: AudioStreamPlayer = $SFX_Jump
 @onready var ScoreCollected = $Camera2D/ScoreLayerCanvas/ScoreBar
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var sfx_run: AudioStreamPlayer = $SFX_Run
 
 var is_attacking: bool = false
 var combo_count: int = 1
@@ -61,6 +62,7 @@ func update_animation(direction):
 	else:
 		if direction != 0:
 			animated_sprite.play("run")
+			sfx_run.play()
 		else:
 			animated_sprite.play("idle")
 
@@ -74,3 +76,4 @@ func HarmedByAMob() -> void:
 	is_attacking = false
 	animated_sprite.play("dead")
 	sfx_die.play()
+	
